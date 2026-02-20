@@ -1,534 +1,444 @@
-```html
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Landing Page - YourBrand</title>
+    <title>Enterprise Solutions - Professional Landing Page</title>
+    <meta name="description" content="Unlock peak performance with our cutting-edge enterprise solutions. Specializing in custom software, cloud integration, and strategic IT consulting.">
 
-    <!-- Google Fonts: Inter (a modern, clean sans-serif font) -->
+    <!-- Google Fonts: Montserrat for a modern, professional look -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-    <!-- Font Awesome for Icons (v6 for modern icons) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0PzLyWigkSDs9ofrwJj5+5XF48S7Q20e2W7n5+T9XN8+p3tT7F3+a3V8A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 
     <style>
-        /* 
-         * Professional Landing Page CSS
-         *
-         * Key features:
-         * - CSS Variables for easy theme customization.
-         * - Modern layout using Flexbox and CSS Grid.
-         * - Fully responsive design with media queries.
-         * - Semantic HTML5 structure.
-         * - Clean, minimal aesthetic.
-         */
+        /* Base Styles & Reset */
+        :root {
+            --primary-color: #007bff;
+            --secondary-color: #28a745;
+            --dark-color: #343a40;
+            --light-color: #f8f9fa;
+            --text-color: #333;
+            --header-height: 80px;
+        }
 
-        /* Basic Reset & Box Sizing */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        /* Root Variables for Theming */
-        :root {
-            --primary-color: #007bff; /* Bright Blue */
-            --primary-dark-color: #0056b3;
-            --accent-color: #6f42c1; /* Purple */
-            --text-color: #333;
-            --light-text-color: #fff;
-            --secondary-text-color: #6c757d;
-            --background-light: #f8f9fa;
-            --background-dark: #343a40;
-            --border-color: #dee2e6;
-            --shadow-light: rgba(0, 0, 0, 0.08);
-            --font-family-sans: 'Inter', sans-serif;
-            --header-height: 70px;
-        }
-
-        /* Base Styles */
-        html {
-            scroll-behavior: smooth;
-        }
-
         body {
-            font-family: var(--font-family-sans);
+            font-family: 'Montserrat', sans-serif;
             line-height: 1.6;
             color: var(--text-color);
-            background-color: var(--light-text-color);
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
+            background-color: var(--light-color);
+            overflow-x: hidden; /* Prevent horizontal scroll */
         }
 
-        /* Global Container for Centering Content */
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
 
-        /* Typography */
         h1, h2, h3 {
-            margin-bottom: 1rem;
-            color: var(--text-color);
-            line-height: 1.2;
+            margin-bottom: 15px;
             font-weight: 700;
+            color: var(--dark-color);
         }
 
-        h1 {
-            font-size: 3.8rem; /* Large headline for hero */
-        }
-
-        h2 {
-            font-size: 2.5rem;
-            text-align: center;
-            margin-bottom: 3.5rem;
-        }
-
-        h3 {
-            font-size: 1.75rem;
-            font-weight: 600;
-        }
+        h1 { font-size: 3.5em; line-height: 1.1; }
+        h2 { font-size: 2.5em; }
+        h3 { font-size: 1.8em; }
 
         p {
-            margin-bottom: 1rem;
+            margin-bottom: 20px;
         }
 
-        .subtitle {
-            font-size: 1.25rem;
-            color: var(--secondary-text-color);
-            margin-bottom: 2.5rem;
-            font-weight: 400;
-        }
-
-        /* Buttons */
-        .button {
-            display: inline-block;
-            padding: 14px 30px;
-            border-radius: 8px;
+        a {
             text-decoration: none;
-            font-weight: 600;
-            font-size: 1rem;
-            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
-            cursor: pointer;
-            border: none;
-            text-align: center;
-        }
-
-        .button.primary {
-            background-color: var(--primary-color);
-            color: var(--light-text-color);
-        }
-
-        .button.primary:hover {
-            background-color: var(--primary-dark-color);
-            transform: translateY(-2px);
-        }
-
-        .button.primary-outline {
-            background-color: transparent;
             color: var(--primary-color);
-            border: 2px solid var(--primary-color);
-            padding: 12px 28px; /* Adjust padding for border */
+            transition: color 0.3s ease;
         }
 
-        .button.primary-outline:hover {
-            background-color: var(--primary-color);
-            color: var(--light-text-color);
-            transform: translateY(-2px);
+        a:hover {
+            color: #0056b3;
         }
 
-        .button.large {
-            font-size: 1.25rem;
-            padding: 18px 40px;
-        }
-
-        /* Header */
+        /* Header / Navbar */
         header {
-            background-color: var(--light-text-color);
+            background-color: #ffffff;
             padding: 15px 0;
-            box-shadow: 0 2px 15px var(--shadow-light);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
             position: sticky;
             top: 0;
-            width: 100%;
             z-index: 1000;
+            height: var(--header-height);
+            display: flex;
+            align-items: center;
         }
 
-        header nav {
+        header .container {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
+            width: 100%;
         }
 
         .logo {
-            font-size: 2rem;
-            font-weight: 800;
+            font-size: 1.8em;
+            font-weight: 700;
+            color: var(--dark-color);
+            display: flex;
+            align-items: center;
+        }
+        .logo span {
             color: var(--primary-color);
-            text-decoration: none;
+            margin-left: 5px;
         }
 
-        /* Main Content Area */
-        main {
-            flex: 1; /* Allows main to take up available space, pushing footer down */
+        nav a {
+            margin-left: 30px;
+            font-weight: 600;
+            color: var(--dark-color);
+            font-size: 1.05em;
+            position: relative;
         }
 
+        nav a::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary-color);
+            transition: width 0.3s ease-in-out;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+        
         /* Hero Section */
-        #hero {
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
-            color: var(--light-text-color);
-            text-align: center;
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #0056b3 100%);
+            color: #ffffff;
             padding: 120px 0;
+            text-align: center;
             display: flex;
             align-items: center;
             justify-content: center;
-            min-height: 80vh; /* Make it prominently tall */
+            min-height: calc(100vh - var(--header-height)); /* Full height minus header */
+            position: relative;
+            overflow: hidden;
+        }
+        /* Subtle background pattern/gradient could go here for more flair */
+
+        .hero h1 {
+            font-size: 4.5em;
+            margin-bottom: 25px;
+            color: #ffffff;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
         }
 
-        #hero h1 {
-            color: var(--light-text-color);
-            margin-bottom: 1.5rem;
+        .hero p {
+            font-size: 1.4em;
             max-width: 900px;
-            margin-left: auto;
-            margin-right: auto;
+            margin: 0 auto 50px auto;
+            color: #e2e2e2;
+            font-weight: 400;
         }
 
-        #hero .subtitle {
-            color: rgba(255, 255, 255, 0.9);
-            max-width: 700px;
-            margin: 0 auto 3rem;
+        .cta-button {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: #ffffff;
+            padding: 18px 45px;
+            border-radius: 8px;
+            font-size: 1.3em;
+            font-weight: 600;
+            transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
         }
 
-        /* General Section Styling */
-        section {
-            padding: 100px 0;
-        }
-
-        section:nth-of-type(odd) { /* Apply lighter background to every other section */
-            background-color: var(--background-light);
+        .cta-button:hover {
+            background-color: #218838;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.3);
         }
 
         /* Features Section */
-        #features .feature-grid {
+        .features {
+            padding: 100px 0;
+            text-align: center;
+            background-color: #ffffff;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .features h2 {
+            margin-bottom: 70px;
+            position: relative;
+            display: inline-block;
+        }
+        .features h2::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -15px;
+            width: 80px;
+            height: 4px;
+            background-color: var(--primary-color);
+            border-radius: 2px;
+        }
+
+        .feature-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 40px;
-            margin-top: 2rem;
         }
 
         .feature-item {
-            background-color: var(--light-text-color);
+            background-color: var(--light-color);
             padding: 35px;
             border-radius: 12px;
-            text-align: center;
-            box-shadow: 0 10px 25px var(--shadow-light);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+            text-align: left;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
         }
-
+        
         .feature-item:hover {
             transform: translateY(-8px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
-        }
-
-        .feature-item .icon {
-            font-size: 3.5rem;
-            color: var(--primary-color);
-            margin-bottom: 1.8rem;
-            display: block; /* Ensures centering */
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
         }
 
         .feature-item h3 {
-            margin-bottom: 1rem;
             color: var(--primary-color);
+            margin-bottom: 15px;
+            font-size: 1.6em;
         }
-
         .feature-item p {
-            font-size: 1.05rem;
-            color: var(--secondary-text-color);
+            font-size: 1.1em;
+            color: #555;
         }
 
-        /* Testimonials Section */
-        #testimonials {
-            background-color: var(--light-text-color); /* Override for white background */
-        }
-
-        #testimonials .testimonial-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 2rem;
-        }
-
-        .testimonial-item {
-            background-color: var(--background-light);
-            padding: 35px;
-            border-radius: 12px;
-            box-shadow: 0 5px 15px var(--shadow-light);
-        }
-
-        .testimonial-item p {
-            font-style: italic;
-            margin-bottom: 1.5rem;
-            font-size: 1.15rem;
-            color: var(--text-color);
-        }
-
-        .testimonial-item .client-info {
-            font-weight: 500;
-            color: var(--secondary-text-color);
-        }
-
-        .testimonial-item .client-name {
-            font-weight: 700;
-            color: var(--primary-color);
-        }
-
-        /* Call to Action Section */
-        #cta-section {
-            background: linear-gradient(90deg, var(--accent-color) 0%, var(--primary-color) 100%);
-            color: var(--light-text-color);
-            text-align: center;
+        /* Call to Action Section (Secondary) */
+        .cta-secondary {
+            background-color: #e6f2ff; /* Light blue background */
             padding: 100px 0;
+            text-align: center;
+            border-top: 1px solid #d0e8ff;
         }
 
-        #cta-section h2 {
-            color: var(--light-text-color);
-            margin-bottom: 1.8rem;
+        .cta-secondary h2 {
+            font-size: 3em;
+            color: var(--dark-color);
+            margin-bottom: 25px;
         }
 
-        #cta-section .subtitle {
-            color: rgba(255, 255, 255, 0.9);
-            margin-bottom: 3.5rem;
+        .cta-secondary p {
+            font-size: 1.3em;
             max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
+            margin: 0 auto 50px auto;
+            color: #555;
         }
 
         /* Footer */
         footer {
-            background-color: var(--background-dark);
-            color: rgba(255, 255, 255, 0.7);
-            padding: 40px 0;
+            background-color: var(--dark-color);
+            color: #ffffff;
+            padding: 50px 0;
             text-align: center;
-            font-size: 0.9rem;
+            font-size: 0.95em;
+            border-top: 5px solid var(--primary-color);
         }
 
         footer .container {
             display: flex;
             flex-direction: column;
-            align-items: center;
-            gap: 20px;
-        }
-
-        .footer-links {
-            display: flex;
             gap: 25px;
         }
 
-        .footer-links a {
-            color: rgba(255, 255, 255, 0.7);
-            text-decoration: none;
-            transition: color 0.3s ease;
+        footer .footer-links a {
+            color: #ffffff;
+            margin: 0 20px;
+            font-weight: 400;
+            position: relative;
         }
 
-        .footer-links a:hover {
-            color: var(--light-text-color);
+        footer .footer-links a::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -3px;
+            width: 0;
+            height: 1px;
+            background-color: #ffffff;
+            transition: width 0.3s ease;
         }
 
-        /* Responsive Adjustments */
+        footer .footer-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Responsive Design */
         @media (max-width: 992px) {
-            h1 {
-                font-size: 3rem;
-            }
-            h2 {
-                font-size: 2.2rem;
-                margin-bottom: 3rem;
-            }
-            .subtitle {
-                font-size: 1.15rem;
-            }
-            #hero {
+            h1 { font-size: 3em; }
+            h2 { font-size: 2em; }
+            h3 { font-size: 1.5em; }
+
+            .hero {
                 padding: 100px 0;
-                min-height: 70vh;
+                min-height: auto;
             }
-            .feature-item, .testimonial-item {
-                padding: 30px;
+            .hero h1 { font-size: 3.5em; }
+            .hero p { font-size: 1.2em; max-width: 700px; }
+
+            .features, .cta-secondary {
+                padding: 80px 0;
             }
+            .features h2 { margin-bottom: 50px; }
+
+            .cta-button { padding: 15px 35px; font-size: 1.2em; }
         }
 
         @media (max-width: 768px) {
-            header nav {
+            header .container {
                 flex-direction: column;
                 gap: 15px;
             }
-            .logo {
-                margin-bottom: 10px;
+            nav {
+                margin-top: 10px;
             }
-            h1 {
-                font-size: 2.5rem;
+            nav a {
+                margin: 0 12px;
+                font-size: 0.95em;
             }
-            h2 {
-                font-size: 2rem;
-                margin-bottom: 2.5rem;
+
+            .hero h1 { font-size: 2.8em; }
+            .hero p { font-size: 1.1em; max-width: 90%; }
+            .features h2 { font-size: 1.8em; margin-bottom: 40px; }
+            .feature-grid { grid-template-columns: 1fr; }
+            .feature-item { padding: 30px; }
+
+            .cta-secondary h2 { font-size: 2.2em; }
+            .cta-secondary p { font-size: 1.1em; max-width: 90%; }
+
+            footer .footer-links {
+                flex-direction: column;
+                gap: 12px;
             }
-            h3 {
-                font-size: 1.5rem;
-            }
-            .subtitle {
-                font-size: 1.05rem;
-            }
-            #hero {
-                padding: 80px 0;
-                min-height: 60vh;
-            }
-            section {
-                padding: 80px 0;
-            }
-            .button {
-                padding: 12px 25px;
-            }
-            .button.large {
-                font-size: 1.1rem;
-                padding: 15px 35px;
-            }
+            footer .footer-links a { margin: 0; }
         }
 
-        @media (max-width: 576px) {
-            .container {
-                padding: 0 15px;
-            }
-            h1 {
-                font-size: 2rem;
-            }
-            h2 {
-                font-size: 1.8rem;
-            }
-            .subtitle {
-                font-size: 1rem;
-            }
-            #hero {
-                padding: 60px 0;
-                min-height: 50vh;
-            }
-            section {
-                padding: 60px 0;
-            }
-            .button.large {
-                font-size: 1rem;
-                padding: 12px 30px;
-            }
-            footer .container {
-                flex-direction: column;
-                gap: 15px;
-            }
-            .footer-links {
-                flex-direction: column;
-                gap: 10px;
-            }
-            .footer-links a {
-                margin: 0;
-            }
+        @media (max-width: 480px) {
+            h1 { font-size: 2.5em; }
+            h2 { font-size: 1.7em; }
+            h3 { font-size: 1.3em; }
+
+            .hero { padding: 80px 0; }
+            .hero h1 { font-size: 2.4em; }
+            .hero p { font-size: 1em; margin-bottom: 30px; }
+            .cta-button { padding: 12px 25px; font-size: 1em; }
+
+            .features, .cta-secondary { padding: 60px 0; }
+            .features h2 { font-size: 1.6em; }
+            .cta-secondary h2 { font-size: 1.8em; }
+            .cta-secondary p { font-size: 1em; }
         }
     </style>
 </head>
 <body>
+
     <header>
-        <nav class="container">
-            <a href="#" class="logo">YourBrand</a>
-            <a href="#cta-section" class="button primary-outline">Get Started</a>
-        </nav>
+        <div class="container">
+            <a href="#" class="logo">Your<span>Pro</span>Solutions</a>
+            <nav>
+                <a href="#features">Services</a>
+                <a href="#about">About Us</a>
+                <a href="#contact">Contact</a>
+                <a href="#">Client Login</a>
+            </nav>
+        </div>
     </header>
 
     <main>
-        <section id="hero">
+        <section class="hero">
             <div class="container">
-                <h1>Elevate Your Workflow with Our Cutting-Edge Solution</h1>
-                <p class="subtitle">Designed for professionals, our platform empowers you to achieve more with unparalleled efficiency and insight.</p>
-                <a href="#cta-section" class="button primary large">Start Your Free Trial Today</a>
+                <h1>Transform Your Vision into Reality</h1>
+                <p>Leading the way in advanced software development, cloud architecture, and strategic digital transformation for enterprises worldwide.</p>
+                <a href="#contact" class="cta-button">Schedule a Consultation</a>
             </div>
         </section>
 
-        <section id="features">
+        <section id="features" class="features">
             <div class="container">
-                <h2>Key Features Built for Excellence</h2>
+                <h2>Our Advanced Expertise</h2>
                 <div class="feature-grid">
                     <div class="feature-item">
-                        <i class="icon fas fa-cogs"></i>
-                        <h3>Seamless Integration</h3>
-                        <p>Connect effortlessly with your existing tools and services for a unified experience.</p>
+                        <h3>Custom Software Development</h3>
+                        <p>Architecting robust, scalable, and secure applications tailored precisely to your operational workflows and strategic goals.</p>
                     </div>
                     <div class="feature-item">
-                        <i class="icon fas fa-shield-alt"></i>
-                        <h3>Enterprise-Grade Security</h3>
-                        <p>Protect your valuable data with advanced encryption and robust security protocols.</p>
+                        <h3>Cloud Infrastructure & DevOps</h3>
+                        <p>Implementing resilient cloud solutions (AWS, Azure, GCP) and optimizing CI/CD pipelines for accelerated deployment and efficiency.</p>
                     </div>
                     <div class="feature-item">
-                        <i class="icon fas fa-rocket"></i>
-                        <h3>Blazing Fast Performance</h3>
-                        <p>Experience lightning-fast processing and real-time updates for optimal productivity.</p>
+                        <h3>AI & Machine Learning Integration</h3>
+                        <p>Leveraging artificial intelligence to automate processes, extract insights from data, and build intelligent systems for competitive advantage.</p>
                     </div>
                     <div class="feature-item">
-                        <i class="icon fas fa-headset"></i>
-                        <h3>24/7 Premium Support</h3>
-                        <p>Our dedicated experts are always on standby to provide assistance and guidance.</p>
+                        <h3>Cybersecurity & Compliance</h3>
+                        <p>Fortifying your digital assets with comprehensive security strategies, risk assessments, and adherence to industry compliance standards.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Data Analytics & Business Intelligence</h3>
+                        <p>Turning complex data into actionable intelligence through advanced analytics, reporting, and dashboard visualization.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>IT Strategy & Consulting</h3>
+                        <p>Providing expert guidance to align your technology roadmap with business objectives, ensuring sustainable growth and innovation.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="testimonials">
+        <!-- Optional: About Us or Testimonial Section can be added here -->
+        <section id="about" class="cta-secondary">
             <div class="container">
-                <h2>What Our Industry Leaders Say</h2>
-                <div class="testimonial-grid">
-                    <div class="testimonial-item">
-                        <p>"YourBrand has revolutionized how we approach project management. The insights are invaluable!"</p>
-                        <div class="client-info">
-                            <span class="client-name">Sarah Chen</span>, CEO of InnovateCorp
-                        </div>
-                    </div>
-                    <div class="testimonial-item">
-                        <p>"The security features are top-notch, giving us peace of mind. A truly essential tool for our team."</p>
-                        <div class="client-info">
-                            <span class="client-name">David Lee</span>, CTO of GlobalTech Solutions
-                        </div>
-                    </div>
-                    <div class="testimonial-item">
-                        <p>"Unmatched performance and incredible support. This is the future of professional software."</p>
-                        <div class="client-info">
-                            <span class="client-name">Maria Rodriguez</span>, Lead Engineer at PixelWorks
-                        </div>
-                    </div>
-                </div>
+                <h2>Why Choose YourProSolutions?</h2>
+                <p>We combine deep technical expertise with a client-centric approach, delivering innovative solutions that drive measurable business outcomes and lasting value.</p>
+                <a href="#contact" class="cta-button">Learn More About Us</a>
             </div>
         </section>
 
-        <section id="cta-section">
+
+        <section id="contact" class="cta-secondary" style="background-color: #ffffff; border-top: 1px solid #e9ecef;">
             <div class="container">
-                <h2>Ready to Transform Your Professional Journey?</h2>
-                <p class="subtitle">Join thousands of leading professionals who are already experiencing the difference.</p>
-                <a href="#" class="button primary large">Get Started Now</a>
+                <h2>Ready to Elevate Your Enterprise?</h2>
+                <p>Partner with us to navigate your biggest technology challenges and unlock new possibilities for growth and efficiency.</p>
+                <a href="mailto:contact@yourprosolutions.com" class="cta-button">Get in Touch</a>
             </div>
         </section>
     </main>
 
     <footer>
         <div class="container">
-            <p>&copy; 2023 YourBrand. All rights reserved.</p>
+            <p>&copy; 2023 YourProSolutions. All rights reserved.</p>
             <div class="footer-links">
                 <a href="#">Privacy Policy</a>
                 <a href="#">Terms of Service</a>
-                <a href="#">Contact Us</a>
+                <a href="#">Sitemap</a>
+                <a href="#">Careers</a>
             </div>
         </div>
     </footer>
+
 </body>
 </html>
-```

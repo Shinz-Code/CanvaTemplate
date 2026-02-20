@@ -4,37 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enterprise Solutions - Professional Landing Page</title>
-    <meta name="description" content="Unlock peak performance with our cutting-edge enterprise solutions. Specializing in custom software, cloud integration, and strategic IT consulting.">
-
-    <!-- Google Fonts: Montserrat for a modern, professional look -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-
+    <title>BNB Pro - Your Professional Booking Platform</title>
     <style>
-        /* Base Styles & Reset */
-        :root {
-            --primary-color: #007bff;
-            --secondary-color: #28a745;
-            --dark-color: #343a40;
-            --light-color: #f8f9fa;
-            --text-color: #333;
-            --header-height: 80px;
-        }
-
-        * {
+        /* General Styles */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Montserrat', sans-serif;
             line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--light-color);
-            overflow-x: hidden; /* Prevent horizontal scroll */
+            color: #333;
+            background-color: #f8f9fa; /* Light background */
         }
 
         .container {
@@ -44,313 +23,315 @@
         }
 
         h1, h2, h3 {
-            margin-bottom: 15px;
-            font-weight: 700;
-            color: var(--dark-color);
+            color: #007bff; /* Primary blue for headings */
+            margin-bottom: 0.8em;
         }
-
-        h1 { font-size: 3.5em; line-height: 1.1; }
-        h2 { font-size: 2.5em; }
-        h3 { font-size: 1.8em; }
 
         p {
-            margin-bottom: 20px;
+            margin-bottom: 1em;
         }
 
-        a {
+        .btn {
+            display: inline-block;
+            background-color: #007bff;
+            color: #fff;
+            padding: 12px 25px;
+            border-radius: 5px;
             text-decoration: none;
-            color: var(--primary-color);
-            transition: color 0.3s ease;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            border: none;
+            cursor: pointer;
         }
 
-        a:hover {
-            color: #0056b3;
+        .btn:hover {
+            background-color: #0056b3; /* Darker blue on hover */
         }
 
-        /* Header / Navbar */
+        /* Header */
         header {
-            background-color: #ffffff;
+            background-color: #fff;
             padding: 15px 0;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            height: var(--header-height);
-            display: flex;
-            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            border-bottom: 3px solid #007bff; /* Blue accent line */
         }
 
         header .container {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            width: 100%;
         }
 
         .logo {
             font-size: 1.8em;
-            font-weight: 700;
-            color: var(--dark-color);
-            display: flex;
-            align-items: center;
+            font-weight: bold;
+            color: #007bff;
+            text-decoration: none;
         }
         .logo span {
-            color: var(--primary-color);
-            margin-left: 5px;
+            color: #333; /* Slightly different color for "Pro" */
         }
 
-        nav a {
-            margin-left: 30px;
-            font-weight: 600;
-            color: var(--dark-color);
-            font-size: 1.05em;
-            position: relative;
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
         }
 
-        nav a::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: -5px;
-            width: 0;
-            height: 2px;
-            background-color: var(--primary-color);
-            transition: width 0.3s ease-in-out;
+        nav ul li {
+            margin-left: 25px;
         }
 
-        nav a:hover::after {
-            width: 100%;
+        nav ul li a {
+            text-decoration: none;
+            color: #555;
+            font-weight: 500;
+            transition: color 0.3s ease;
         }
-        
+
+        nav ul li a:hover {
+            color: #007bff;
+        }
+
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, var(--primary-color) 0%, #0056b3 100%);
-            color: #ffffff;
-            padding: 120px 0;
+            background-color: #e0f2ff; /* Lighter blue background */
+            padding: 80px 0;
             text-align: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: calc(100vh - var(--header-height)); /* Full height minus header */
             position: relative;
             overflow: hidden;
         }
-        /* Subtle background pattern/gradient could go here for more flair */
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at top left, rgba(0,123,255,0.1) 0%, transparent 50%);
+            z-index: 0;
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at bottom right, rgba(0,123,255,0.1) 0%, transparent 50%);
+            z-index: 0;
+        }
+        .hero .container {
+            position: relative;
+            z-index: 1;
+        }
 
         .hero h1 {
-            font-size: 4.5em;
-            margin-bottom: 25px;
-            color: #ffffff;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            font-size: 3.2em;
+            margin-bottom: 20px;
+            color: #0056b3; /* Darker blue for main heading */
         }
 
         .hero p {
-            font-size: 1.4em;
-            max-width: 900px;
-            margin: 0 auto 50px auto;
-            color: #e2e2e2;
-            font-weight: 400;
-        }
-
-        .cta-button {
-            display: inline-block;
-            background-color: var(--secondary-color);
-            color: #ffffff;
-            padding: 18px 45px;
-            border-radius: 8px;
             font-size: 1.3em;
-            font-weight: 600;
-            transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-        }
-
-        .cta-button:hover {
-            background-color: #218838;
-            transform: translateY(-3px);
-            box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+            color: #444;
+            max-width: 700px;
+            margin: 0 auto 40px auto;
         }
 
         /* Features Section */
         .features {
-            padding: 100px 0;
+            padding: 80px 0;
+            background-color: #fff;
             text-align: center;
-            background-color: #ffffff;
-            border-bottom: 1px solid #e9ecef;
         }
 
         .features h2 {
-            margin-bottom: 70px;
-            position: relative;
-            display: inline-block;
-        }
-        .features h2::after {
-            content: '';
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            bottom: -15px;
-            width: 80px;
-            height: 4px;
-            background-color: var(--primary-color);
-            border-radius: 2px;
+            font-size: 2.5em;
+            margin-bottom: 60px;
         }
 
         .feature-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 40px;
         }
 
         .feature-item {
-            background-color: var(--light-color);
-            padding: 35px;
-            border-radius: 12px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+            padding: 30px;
+            background-color: #f8faff; /* Very light blue for feature boxes */
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
             text-align: left;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-        }
-        
-        .feature-item:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+            border-top: 4px solid #007bff;
         }
 
         .feature-item h3 {
-            color: var(--primary-color);
-            margin-bottom: 15px;
-            font-size: 1.6em;
+            font-size: 1.5em;
+            margin-top: 0;
+            color: #007bff;
         }
+
         .feature-item p {
             font-size: 1.1em;
-            color: #555;
+            color: #666;
         }
 
-        /* Call to Action Section (Secondary) */
-        .cta-secondary {
-            background-color: #e6f2ff; /* Light blue background */
-            padding: 100px 0;
+        /* Call to Action Section (Middle) */
+        .cta-middle {
+            background-color: #007bff;
+            color: #fff;
+            padding: 60px 0;
             text-align: center;
-            border-top: 1px solid #d0e8ff;
+            margin-top: 60px;
         }
 
-        .cta-secondary h2 {
-            font-size: 3em;
-            color: var(--dark-color);
-            margin-bottom: 25px;
+        .cta-middle h2 {
+            color: #fff;
+            font-size: 2.8em;
+            margin-bottom: 20px;
         }
 
-        .cta-secondary p {
-            font-size: 1.3em;
+        .cta-middle p {
+            font-size: 1.4em;
             max-width: 800px;
-            margin: 0 auto 50px auto;
-            color: #555;
+            margin: 0 auto 30px auto;
+            opacity: 0.9;
+        }
+
+        .btn-secondary {
+            background-color: #fff;
+            color: #007bff;
+            padding: 15px 35px;
+            border: 2px solid #fff;
+        }
+
+        .btn-secondary:hover {
+            background-color: transparent;
+            color: #fff;
+        }
+
+        /* How It Works Section */
+        .how-it-works {
+            padding: 80px 0;
+            background-color: #f0f8ff; /* Another light blue variant */
+            text-align: center;
+        }
+
+        .how-it-works h2 {
+            font-size: 2.5em;
+            margin-bottom: 60px;
+        }
+
+        .steps-grid {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .step-item {
+            flex-basis: 300px;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            position: relative;
+            margin-bottom: 20px; /* For smaller screens */
+        }
+        .step-item::before {
+            content: attr(data-step);
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #007bff;
+            color: #fff;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5em;
+            font-weight: bold;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .step-item h3 {
+            margin-top: 30px; /* Space for the step number */
+            font-size: 1.4em;
+            color: #007bff;
         }
 
         /* Footer */
         footer {
-            background-color: var(--dark-color);
-            color: #ffffff;
-            padding: 50px 0;
+            background-color: #343a40; /* Dark grey */
+            color: #f8f9fa;
+            padding: 40px 0;
             text-align: center;
-            font-size: 0.95em;
-            border-top: 5px solid var(--primary-color);
+            font-size: 0.9em;
         }
 
         footer .container {
             display: flex;
             flex-direction: column;
-            gap: 25px;
+            gap: 20px;
         }
 
         footer .footer-links a {
-            color: #ffffff;
-            margin: 0 20px;
-            font-weight: 400;
-            position: relative;
+            color: #e0f2ff;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s ease;
         }
 
-        footer .footer-links a::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: -3px;
-            width: 0;
-            height: 1px;
-            background-color: #ffffff;
-            transition: width 0.3s ease;
-        }
-
-        footer .footer-links a:hover::after {
-            width: 100%;
+        footer .footer-links a:hover {
+            color: #007bff;
         }
 
         /* Responsive Design */
-        @media (max-width: 992px) {
-            h1 { font-size: 3em; }
-            h2 { font-size: 2em; }
-            h3 { font-size: 1.5em; }
-
-            .hero {
-                padding: 100px 0;
-                min-height: auto;
-            }
-            .hero h1 { font-size: 3.5em; }
-            .hero p { font-size: 1.2em; max-width: 700px; }
-
-            .features, .cta-secondary {
-                padding: 80px 0;
-            }
-            .features h2 { margin-bottom: 50px; }
-
-            .cta-button { padding: 15px 35px; font-size: 1.2em; }
-        }
-
         @media (max-width: 768px) {
             header .container {
                 flex-direction: column;
-                gap: 15px;
-            }
-            nav {
-                margin-top: 10px;
-            }
-            nav a {
-                margin: 0 12px;
-                font-size: 0.95em;
             }
 
-            .hero h1 { font-size: 2.8em; }
-            .hero p { font-size: 1.1em; max-width: 90%; }
-            .features h2 { font-size: 1.8em; margin-bottom: 40px; }
-            .feature-grid { grid-template-columns: 1fr; }
-            .feature-item { padding: 30px; }
+            nav ul {
+                margin-top: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
 
-            .cta-secondary h2 { font-size: 2.2em; }
-            .cta-secondary p { font-size: 1.1em; max-width: 90%; }
+            nav ul li {
+                margin: 0 10px 10px 10px;
+            }
 
-            footer .footer-links {
+            .hero h1 {
+                font-size: 2.5em;
+            }
+
+            .hero p {
+                font-size: 1.1em;
+            }
+
+            .features h2, .cta-middle h2, .how-it-works h2 {
+                font-size: 2em;
+            }
+
+            .feature-grid, .steps-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .feature-item, .step-item {
+                max-width: 90%;
+                margin: 0 auto 30px auto;
+            }
+            .steps-grid {
                 flex-direction: column;
-                gap: 12px;
+                align-items: center;
             }
-            footer .footer-links a { margin: 0; }
-        }
-
-        @media (max-width: 480px) {
-            h1 { font-size: 2.5em; }
-            h2 { font-size: 1.7em; }
-            h3 { font-size: 1.3em; }
-
-            .hero { padding: 80px 0; }
-            .hero h1 { font-size: 2.4em; }
-            .hero p { font-size: 1em; margin-bottom: 30px; }
-            .cta-button { padding: 12px 25px; font-size: 1em; }
-
-            .features, .cta-secondary { padding: 60px 0; }
-            .features h2 { font-size: 1.6em; }
-            .cta-secondary h2 { font-size: 1.8em; }
-            .cta-secondary p { font-size: 1em; }
         }
     </style>
 </head>
@@ -358,12 +339,16 @@
 
     <header>
         <div class="container">
-            <a href="#" class="logo">Your<span>Pro</span>Solutions</a>
+            <a href="#" class="logo">BNB<span>Pro</span></a>
             <nav>
-                <a href="#features">Services</a>
-                <a href="#about">About Us</a>
-                <a href="#contact">Contact</a>
-                <a href="#">Client Login</a>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Listings</a></li>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">How It Works</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#" class="btn">Login/Signup</a></li>
+                </ul>
             </nav>
         </div>
     </header>
@@ -371,71 +356,81 @@
     <main>
         <section class="hero">
             <div class="container">
-                <h1>Transform Your Vision into Reality</h1>
-                <p>Leading the way in advanced software development, cloud architecture, and strategic digital transformation for enterprises worldwide.</p>
-                <a href="#contact" class="cta-button">Schedule a Consultation</a>
+                <h1>Unlock Your Property's Full Potential</h1>
+                <p>Designed by professionals, for professionals. Manage your vacation rentals, short-term stays, and bookings with unparalleled ease and efficiency.</p>
+                <a href="#features" class="btn">Learn More</a>
+                <a href="#cta-middle" class="btn btn-secondary" style="margin-left: 15px;">List Your Property Now</a>
             </div>
         </section>
 
         <section id="features" class="features">
             <div class="container">
-                <h2>Our Advanced Expertise</h2>
+                <h2>Why Choose BNB Pro?</h2>
                 <div class="feature-grid">
                     <div class="feature-item">
-                        <h3>Custom Software Development</h3>
-                        <p>Architecting robust, scalable, and secure applications tailored precisely to your operational workflows and strategic goals.</p>
+                        <h3>Intuitive Dashboard</h3>
+                        <p>A sleek, professional interface designed for quick oversight of all your properties and bookings.</p>
                     </div>
                     <div class="feature-item">
-                        <h3>Cloud Infrastructure & DevOps</h3>
-                        <p>Implementing resilient cloud solutions (AWS, Azure, GCP) and optimizing CI/CD pipelines for accelerated deployment and efficiency.</p>
+                        <h3>Automated Management</h3>
+                        <p>Streamline check-ins, check-outs, and communication with automated messaging and task assignments.</p>
                     </div>
                     <div class="feature-item">
-                        <h3>AI & Machine Learning Integration</h3>
-                        <p>Leveraging artificial intelligence to automate processes, extract insights from data, and build intelligent systems for competitive advantage.</p>
+                        <h3>Advanced Analytics</h3>
+                        <p>Gain insights into performance, occupancy rates, and revenue with robust reporting tools.</p>
                     </div>
                     <div class="feature-item">
-                        <h3>Cybersecurity & Compliance</h3>
-                        <p>Fortifying your digital assets with comprehensive security strategies, risk assessments, and adherence to industry compliance standards.</p>
+                        <h3>Secure Payments</h3>
+                        <p>Ensure smooth and secure transactions with integrated payment processing for all your bookings.</p>
                     </div>
                     <div class="feature-item">
-                        <h3>Data Analytics & Business Intelligence</h3>
-                        <p>Turning complex data into actionable intelligence through advanced analytics, reporting, and dashboard visualization.</p>
+                        <h3>Multi-Platform Sync</h3>
+                        <p>Effortlessly sync your listings across major booking platforms to prevent double bookings.</p>
                     </div>
                     <div class="feature-item">
-                        <h3>IT Strategy & Consulting</h3>
-                        <p>Providing expert guidance to align your technology roadmap with business objectives, ensuring sustainable growth and innovation.</p>
+                        <h3>24/7 Professional Support</h3>
+                        <p>Our dedicated support team is always here to assist you with any questions or issues.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Optional: About Us or Testimonial Section can be added here -->
-        <section id="about" class="cta-secondary">
+        <section id="cta-middle" class="cta-middle">
             <div class="container">
-                <h2>Why Choose YourProSolutions?</h2>
-                <p>We combine deep technical expertise with a client-centric approach, delivering innovative solutions that drive measurable business outcomes and lasting value.</p>
-                <a href="#contact" class="cta-button">Learn More About Us</a>
+                <h2>Ready to Elevate Your Booking Business?</h2>
+                <p>Join a growing community of property managers and hosts who trust BNB Pro for their professional booking needs.</p>
+                <a href="#" class="btn btn-secondary">Get Started Today</a>
             </div>
         </section>
 
-
-        <section id="contact" class="cta-secondary" style="background-color: #ffffff; border-top: 1px solid #e9ecef;">
+        <section id="how-it-works" class="how-it-works">
             <div class="container">
-                <h2>Ready to Elevate Your Enterprise?</h2>
-                <p>Partner with us to navigate your biggest technology challenges and unlock new possibilities for growth and efficiency.</p>
-                <a href="mailto:contact@yourprosolutions.com" class="cta-button">Get in Touch</a>
+                <h2>How It Works: Simple Steps to Success</h2>
+                <div class="steps-grid">
+                    <div class="step-item" data-step="1">
+                        <h3>Create Your Account</h3>
+                        <p>Sign up in minutes and set up your professional profile.</p>
+                    </div>
+                    <div class="step-item" data-step="2">
+                        <h3>List Your Properties</h3>
+                        <p>Add details, photos, and availability for all your rental units.</p>
+                    </div>
+                    <div class="step-item" data-step="3">
+                        <h3>Manage & Grow</h3>
+                        <p>Start receiving bookings, manage guests, and track your success.</p>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
 
     <footer>
         <div class="container">
-            <p>&copy; 2023 YourProSolutions. All rights reserved.</p>
+            <p>&copy; 2023 BNB Pro. All rights reserved.</p>
             <div class="footer-links">
                 <a href="#">Privacy Policy</a>
                 <a href="#">Terms of Service</a>
                 <a href="#">Sitemap</a>
-                <a href="#">Careers</a>
             </div>
         </div>
     </footer>

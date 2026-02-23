@@ -1,1 +1,256 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reference</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .serif {
+            font-family: 'Playfair Display', serif;
+        }
+        .fade-in {
+            animation: fadeIn 1.2s ease-out forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .nav-link::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 1px;
+            background: #000;
+            transition: width .3s;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        /* Tab Styles */
+        .tab-active {
+            color: #000;
+            border-bottom: 2px solid #000;
+        }
+    </style>
+</head>
+<body class="bg-[#fafafa] text-zinc-900">
 
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 px-8 py-6 flex justify-between items-center transition-all duration-300 mix-blend-difference invert" id="main-nav">
+        <div class="text-xl font-semibold tracking-tighter">LICERIA & CO.</div>
+        <div class="hidden md:flex space-x-12 text-sm uppercase tracking-widest font-medium">
+            <a href="#" class="nav-link">Home</a>
+            <a href="#resources" class="nav-link">Resources</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </div>
+        <div class="md:hidden">
+            <button class="focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="h-screen flex flex-col justify-center items-center px-6 text-center">
+        <div class="fade-in">
+            <span class="text-xs uppercase tracking-[0.3em] mb-4 block text-zinc-500">Established 2024</span>
+            <h1 class="serif text-5xl md:text-8xl mb-8 leading-tight">
+                Simplicity is the <br> <span class="italic">ultimate</span> sophistication.
+            </h1>
+            <p class="max-w-md mx-auto text-zinc-500 mb-10 leading-relaxed">
+                Kami percaya pada keindahan fungsional dan desain yang tidak lekang oleh waktu. Menghadirkan solusi kreatif oleh Adeline Palmerston.
+            </p>
+            <a href="#resources" class="px-8 py-4 border border-zinc-900 text-sm uppercase tracking-widest hover:bg-zinc-900 hover:text-white transition-all duration-300">
+                Explore Work
+            </a>
+        </div>
+    </section>
+
+    <!-- Tab Section -->
+    <section id="resources" class="py-32 px-6 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <!-- Tab Navigation -->
+            <div class="flex justify-center mb-16 space-x-12 border-b border-zinc-100">
+                <button onclick="switchTab('template')" id="btn-template" class="pb-4 text-sm font-semibold tracking-widest text-zinc-400 transition-all tab-active uppercase">
+                    Template
+                </button>
+                <button onclick="switchTab('presentasi')" id="btn-presentasi" class="pb-4 text-sm font-semibold tracking-widest text-zinc-400 transition-all uppercase">
+                    Presentasi
+                </button>
+            </div>
+
+            <!-- Tab Content: Template -->
+            <div id="content-template" class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-white rounded-[28px] overflow-hidden border border-zinc-100 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.05)] flex flex-col hover:shadow-lg transition-shadow duration-300">
+                    <div class="aspect-video w-full bg-zinc-100">
+                        <img src="https://images.unsplash.com/photo-1600132806370-bf17e65e942f?auto=format&fit=crop&q=80&w=800" alt="[Gambar Branding]" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 flex justify-between items-center mt-auto">
+                        <div>
+                            <div class="font-bold text-zinc-900 text-lg">Gratis</div>
+                            <div class="text-zinc-400 text-xs font-medium">Kategori Template</div>
+                        </div>
+                        <a href="#" class="bg-zinc-900 text-white text-sm font-semibold px-5 py-2.5 rounded-xl hover:bg-zinc-800 transition-colors">
+                            Buka
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white rounded-[28px] overflow-hidden border border-zinc-100 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.05)] flex flex-col hover:shadow-lg transition-shadow duration-300">
+                    <div class="aspect-video w-full bg-zinc-100">
+                        <img src="https://images.unsplash.com/photo-1544928147-79a2dbc1f389?auto=format&fit=crop&q=80&w=800" alt="[Gambar Tata Letak Editorial]" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 flex justify-between items-center mt-auto">
+                        <div>
+                            <div class="font-bold text-zinc-900 text-lg">Rp 150k</div>
+                            <div class="text-zinc-400 text-xs font-medium">Kategori Template</div>
+                        </div>
+                        <a href="#" class="bg-zinc-900 text-white text-sm font-semibold px-5 py-2.5 rounded-xl hover:bg-zinc-800 transition-colors">
+                            Buka
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white rounded-[28px] overflow-hidden border border-zinc-100 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.05)] flex flex-col hover:shadow-lg transition-shadow duration-300">
+                    <div class="aspect-video w-full bg-zinc-100">
+                        <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&q=80&w=800" alt="[Gambar Feed Sosial]" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 flex justify-between items-center mt-auto">
+                        <div>
+                            <div class="font-bold text-zinc-900 text-lg">Gratis</div>
+                            <div class="text-zinc-400 text-xs font-medium">Kategori Template</div>
+                        </div>
+                        <a href="#" class="bg-zinc-900 text-white text-sm font-semibold px-5 py-2.5 rounded-xl hover:bg-zinc-800 transition-colors">
+                            Buka
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab Content: Presentasi (Hidden) -->
+            <div id="content-presentasi" class="hidden grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Card 4 -->
+                <div class="bg-white rounded-[28px] overflow-hidden border border-zinc-100 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.05)] flex flex-col hover:shadow-lg transition-shadow duration-300">
+                    <div class="aspect-video w-full bg-zinc-100">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800" alt="[Gambar Laporan Tahunan]" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 flex justify-between items-center mt-auto">
+                        <div>
+                            <div class="font-bold text-zinc-900 text-lg">Rp 250k</div>
+                            <div class="text-zinc-400 text-xs font-medium">Kategori Presentasi</div>
+                        </div>
+                        <a href="#" class="bg-zinc-900 text-white text-sm font-semibold px-5 py-2.5 rounded-xl hover:bg-zinc-800 transition-colors">
+                            Buka
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="bg-white rounded-[28px] overflow-hidden border border-zinc-100 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.05)] flex flex-col hover:shadow-lg transition-shadow duration-300">
+                    <div class="aspect-video w-full bg-zinc-100">
+                        <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&q=80&w=800" alt="[Gambar Pitch Deck]" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 flex justify-between items-center mt-auto">
+                        <div>
+                            <div class="font-bold text-zinc-900 text-lg">Gratis</div>
+                            <div class="text-zinc-400 text-xs font-medium">Kategori Presentasi</div>
+                        </div>
+                        <a href="#" class="bg-zinc-900 text-white text-sm font-semibold px-5 py-2.5 rounded-xl hover:bg-zinc-800 transition-colors">
+                            Buka
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="bg-white rounded-[28px] overflow-hidden border border-zinc-100 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.05)] flex flex-col hover:shadow-lg transition-shadow duration-300">
+                    <div class="aspect-video w-full bg-zinc-100">
+                        <img src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?auto=format&fit=crop&q=80&w=800" alt="[Gambar Portofolio Kreatif]" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 flex justify-between items-center mt-auto">
+                        <div>
+                            <div class="font-bold text-zinc-900 text-lg">Rp 100k</div>
+                            <div class="text-zinc-400 text-xs font-medium">Kategori Presentasi</div>
+                        </div>
+                        <a href="#" class="bg-zinc-900 text-white text-sm font-semibold px-5 py-2.5 rounded-xl hover:bg-zinc-800 transition-colors">
+                            Buka
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="py-24 px-6 bg-zinc-900 text-zinc-400">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid md:grid-cols-3 gap-12 mb-20">
+                <div class="col-span-1 md:col-span-2">
+                    <h2 class="serif text-white text-4xl mb-6">Mari berkolaborasi.</h2>
+                    <p class="text-xl">hello@reallygreatsite.com</p>
+                </div>
+                <div>
+                    <h3 class="text-white text-sm uppercase tracking-widest mb-6">Lokasi Kami</h3>
+                    <p class="mb-2">123 Anywhere St., Any City</p>
+                    <p>+123-456-7890</p>
+                </div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row justify-between items-center pt-12 border-t border-zinc-800 text-xs tracking-widest">
+                <p>&copy; 2024 LICERIA & CO. ALL RIGHTS RESERVED.</p>
+                <div class="flex space-x-8 mt-6 md:mt-0">
+                    <a href="#" class="hover:text-white transition-colors">INSTAGRAM</a>
+                    <a href="#" class="hover:text-white transition-colors">DRIBBBLE</a>
+                    <a href="#" class="hover:text-white transition-colors">LINKEDIN</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Nav Scroll Logic
+        window.onscroll = function() {
+            const nav = document.getElementById('main-nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('bg-white', 'py-4', 'shadow-sm', 'mix-blend-normal', 'invert-0');
+                nav.classList.remove('py-6', 'mix-blend-difference', 'invert');
+            } else {
+                nav.classList.remove('bg-white', 'py-4', 'shadow-sm', 'mix-blend-normal', 'invert-0');
+                nav.classList.add('py-6', 'mix-blend-difference', 'invert');
+            }
+        };
+
+        // Tab Switch Logic
+        function switchTab(tabName) {
+            const btnTemplate = document.getElementById('btn-template');
+            const btnPresentasi = document.getElementById('btn-presentasi');
+            const contentTemplate = document.getElementById('content-template');
+            const contentPresentasi = document.getElementById('content-presentasi');
+
+            if (tabName === 'template') {
+                btnTemplate.classList.add('tab-active');
+                btnPresentasi.classList.remove('tab-active');
+                contentTemplate.classList.remove('hidden');
+                contentTemplate.classList.add('grid');
+                contentPresentasi.classList.add('hidden');
+                contentPresentasi.classList.remove('grid');
+            } else {
+                btnPresentasi.classList.add('tab-active');
+                btnTemplate.classList.remove('tab-active');
+                contentPresentasi.classList.remove('hidden');
+                contentPresentasi.classList.add('grid');
+                contentTemplate.classList.add('hidden');
+                contentTemplate.classList.remove('grid');
+            }
+        }
+    </script>
+</body>
+</html>

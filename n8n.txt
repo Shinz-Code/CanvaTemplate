@@ -1,0 +1,257 @@
+{
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        -1200,
+        16
+      ],
+      "id": "e941145a-5a51-4c76-983c-0764433ec7e5",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {
+        "aggregate": "aggregateAllItemData",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.aggregate",
+      "typeVersion": 1,
+      "position": [
+        -816,
+        16
+      ],
+      "id": "efb49703-c778-4cd6-9e4b-e376734daf33",
+      "name": "Aggregate"
+    },
+    {
+      "parameters": {
+        "modelId": {
+          "__rl": true,
+          "value": "models/gemini-2.5-flash",
+          "mode": "list",
+          "cachedResultName": "models/gemini-2.5-flash"
+        },
+        "messages": {
+          "values": [
+            {
+              "content": "=Buatkan Copywriter Professional untuk {{ $json.data[0].Doctype }}, {{ $json.data[1].Doctype }}, {{ $json.data[2].Doctype }},{{ $json.data[3].Doctype }}, {{ $json.data[4].Doctype }}, {{ $json.data[5].Doctype }}. Tambah kan juga Metadata [Struktur], Misal [Judul]....\n\nBuat Maksimal 2 opsi saja\nUntuk teks yang bisa aku copy tambahkan tanda [----------] di awal dan di akhir, disebelum opsi\n\nOutputnya dibuat singkat dan menarik, sesuaikan isi dengan doctype agar mudah digunakan/ diapliksikan pada desain\n\nUntuk informasi seperti kontak, nama orang, brand, nama bisnis gunakan ini: Mobile Number +123-456-7890, Website www.reallygreatsite.com or reallygreatsite.com, Email Address hello@reallygreatsite.com, Social Media Handle @reallygreatsite, Physical Address 123 Anywhere St., Any City, ST 12345, Short Physical Address 123 Anywhere St., Any City. Generic names: Adeline Palmerston, Drew Feig, Jamie Chastain, Olivia Wilson, Alfredo Torres, Estelle Darcy, Kimberly Nguyen, Rosa Maria Aguado, Cahaya Dewi, Hae-won Jeon, Lorna Alvarado, Sacha Dubois, Chiaki Sato, Harper Russo, Matt Zhang, Shawn Garcia, Daniel Gallego, Howard Ong, Murad Naser, Yanis Petros. Generic Business names: Aldenaire & Partners, Ginyard International Co., Liceria & Co., Studio Shodwe, Arowwai Industries, Hanover & Tyke, Paucek & Lage, Thynk Unlimited, Borcelle, Ingoude Company, Rimberio, Timmerman Industries, Fradel & Spies, Keithston & Partners, Fradel & Spies Co., Wardiere Inc., Giggling Platypus Co., Larana, Inc., Salford & Co., Warner & Spencer."
+            }
+          ]
+        },
+        "builtInTools": {},
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.googleGemini",
+      "typeVersion": 1.1,
+      "position": [
+        -640,
+        16
+      ],
+      "id": "86652e08-ade1-48f9-9583-984b68c6c19d",
+      "name": "Row 1",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "gcOqml8XAONHceAz",
+          "name": "Google Gemini(PaLM) Api account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1AQSfrsZ1AeyWxCQed7OPGVIpSKqQHqVMXrraJeuDWAo",
+          "mode": "list",
+          "cachedResultName": "Tema Baru 2026",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1AQSfrsZ1AeyWxCQed7OPGVIpSKqQHqVMXrraJeuDWAo/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1AQSfrsZ1AeyWxCQed7OPGVIpSKqQHqVMXrraJeuDWAo/edit#gid=0"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        -992,
+        16
+      ],
+      "id": "252c9a15-4f4f-4349-84c8-832915c09084",
+      "name": "Get row(s) in sheet",
+      "alwaysOutputData": false,
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "mSpO5WDduwEIqtwS",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "// 1. Ambil data dari path input\nconst rawData = $input.first().json.content.parts[0];\nconst fullText = (typeof rawData === 'object' && rawData !== null) ? (rawData.text || \"\") : (rawData || \"\");\n\n// 2. Regex untuk mencari semua pola [----------]\nconst regex = /\\[-{10,}\\]([\\s\\S]*?)\\[-{10,}\\]/g;\nconst matches = [...fullText.matchAll(regex)];\n\n// 3. Buat objek kosong untuk menampung hasil dengan index\nconst result = {};\n\nmatches.forEach((match, i) => {\n  // Membuat key dinamis: extracted_content_1, extracted_content_2, dst.\n  result[`extracted_content_${i + 1}`] = match[1].trim();\n});\n\n// 4. Tambahkan info total jika dibutuhkan\nresult.total_items = matches.length;\n\nreturn { json: result };"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -1184,
+        240
+      ],
+      "id": "2e9db5b7-1046-4c59-a098-444d7623cec7",
+      "name": "Convert obj to str"
+    },
+    {
+      "parameters": {
+        "html": "<!DOCTYPE html>\n\n<html>\n<head>\n  <meta charset=\"UTF-8\" />\n  <title>My HTML document</title>\n</head>\n<body>\n  <div class=\"container\">\n    <p>\n      {{ $json.plain_text_1 }}\n    </p>\n  </div>\n</body>\n</html>\n\n<style>\n.container {\n  background-color: #ffffff;\n  text-align: center;\n  padding: 16px;\n  border-radius: 8px;\n}\n\nh1 {\n  color: #ff6d5a;\n  font-size: 24px;\n  font-weight: bold;\n  padding: 8px;\n}\n\nh2 {\n  color: #909399;\n  font-size: 18px;\n  font-weight: bold;\n  padding: 8px;\n}\n</style>\n\n<script>\nconsole.log(\"Hello World!\");\n</script>"
+      },
+      "type": "n8n-nodes-base.html",
+      "typeVersion": 1.2,
+      "position": [
+        -800,
+        240
+      ],
+      "id": "8b706f1f-cc8a-40f7-b2cd-15e4dd223035",
+      "name": "HTML2"
+    },
+    {
+      "parameters": {
+        "jsCode": "const item = $input.first();\n\n// Loop untuk memproses extracted_content_1 sampai 12\nfor (let i = 1; i <= 12; i++) {\n  const fieldName = `extracted_content_${i}`;\n  const markdown = item.json[fieldName];\n\n  // Pastikan datanya ada dan bertipe string\n  if (markdown && typeof markdown === 'string') {\n    // 1. Bersihkan simbol Markdown menggunakan Regex\n    let plainText = markdown\n      .replace(/[#*`_~]/g, '')           // Hapus header, bold, code, italic\n      .replace(/\\[(.*?)\\]\\(.*?\\)/g, '$1') // Ambil teks dari Link saja\n      .replace(/>\\s+/g, '')              // Hapus blockquote\n      .replace(/[-*]\\s+/g, '')           // Hapus bullet points\n      .trim();\n\n    // 2. Ubah semua newline (\\n) menjadi <br>\n    plainText = plainText.replace(/\\n/g, '<br>');\n\n    // Simpan hasil ke field baru: plain_text_1, plain_text_2, dst.\n    item.json[`plain_text_${i}`] = plainText;\n  }\n}\n\nreturn [item];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -992,
+        240
+      ],
+      "id": "a00e4b36-1c3e-443c-a7a2-85e6e8f6c0c6",
+      "name": "Code in JavaScript4"
+    },
+    {
+      "parameters": {
+        "resource": "file",
+        "owner": {
+          "__rl": true,
+          "value": "https://github.com/ermediateam06/",
+          "mode": "url"
+        },
+        "repository": {
+          "__rl": true,
+          "value": "https://github.com/ermediateam06/Referensi-Design",
+          "mode": "url"
+        },
+        "filePath": "=Page/{{ $('Aggregate').item.json.data[0].Judul }}.html",
+        "fileContent": "={{ $json.html }}",
+        "commitMessage": "=add "
+      },
+      "type": "n8n-nodes-base.github",
+      "typeVersion": 1.1,
+      "position": [
+        -624,
+        240
+      ],
+      "id": "bf718e31-cc01-4ef9-a8be-f531bb44b9b6",
+      "name": "Create a file",
+      "webhookId": "e848c146-8c30-4190-a8a9-f5d88ffe4e4a",
+      "credentials": {
+        "githubApi": {
+          "id": "WcsaBPoLHQtji8sV",
+          "name": "GitHub account"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "Get row(s) in sheet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Aggregate": {
+      "main": [
+        [
+          {
+            "node": "Row 1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Row 1": {
+      "main": [
+        [
+          {
+            "node": "Convert obj to str",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get row(s) in sheet": {
+      "main": [
+        [
+          {
+            "node": "Aggregate",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Convert obj to str": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTML2": {
+      "main": [
+        [
+          {
+            "node": "Create a file",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript4": {
+      "main": [
+        [
+          {
+            "node": "HTML2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create a file": {
+      "main": [
+        []
+      ]
+    }
+  },
+  "pinData": {},
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "93ab2152ef805e16ec266b5fc6bb0d5cf7a298b7ffbc6dc38595f09333ff58ce"
+  }
+}

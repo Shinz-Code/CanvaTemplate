@@ -3,254 +3,275 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reference</title>
+    <title>Panenku - Gerbang ke Hasil Panen Terbaik</title>
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <!-- Optional: Google Fonts for a nicer look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Poppins', sans-serif;
             scroll-behavior: smooth;
         }
-        .serif {
-            font-family: 'Playfair Display', serif;
-        }
-        .fade-in {
-            animation: fadeIn 1.2s ease-out forwards;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .nav-link::after {
-            content: '';
-            display: block;
-            width: 0;
-            height: 1px;
-            background: #000;
-            transition: width .3s;
-        }
-        .nav-link:hover::after {
-            width: 100%;
-        }
-        /* Tab Styles */
-        .tab-active {
-            color: #000;
-            border-bottom: 2px solid #000;
+        /* Custom Tailwind Configuration (optional, if you want to extend it) */
+        /* You can put this in tailwind.config.js if you use a build process */
+        :root {
+            --color-primary: #10B981; /* green-500 */
+            --color-secondary: #047857; /* green-700 */
+            --color-accent: #F59E0B; /* amber-500 */
         }
     </style>
 </head>
-<body class="bg-[#fafafa] text-zinc-900">
+<body class="bg-gray-50 text-gray-800">
 
-    <!-- Navigation -->
-    <nav class="fixed w-full z-50 px-8 py-6 flex justify-between items-center transition-all duration-300 mix-blend-difference invert" id="main-nav">
-        <div class="text-xl font-semibold tracking-tighter">PageSample</div>
-        <div class="hidden md:flex space-x-12 text-sm uppercase tracking-widest font-medium">
-            <a href="#" class="nav-link">Reference</a>
-            <a href="#resources" class="nav-link">Color</a>
-            <a href="#contact" class="nav-link">Contact</a>
+    <!-- Header Section -->
+    <header class="bg-white shadow-md py-4 sticky top-0 z-50">
+        <nav class="container mx-auto flex justify-between items-center px-6">
+            <a href="#" class="text-3xl font-bold text-green-700 hover:text-green-800 transition duration-300">Panenku</a>
+            <ul class="flex space-x-6">
+                <li><a href="#home" class="text-gray-700 hover:text-green-600 font-semibold transition duration-300">Beranda</a></li>
+                <li><a href="#fitur" class="text-gray-700 hover:text-green-600 font-semibold transition duration-300">Fitur Kami</a></li>
+                <li><a href="#tentang" class="text-gray-700 hover:text-green-600 font-semibold transition duration-300">Tentang Kami</a></li>
+                <li><a href="#produk" class="text-gray-700 hover:text-green-600 font-semibold transition duration-300">Produk</a></li>
+                <li><a href="#kontak" class="text-gray-700 hover:text-green-600 font-semibold transition duration-300">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="bg-green-100 py-20 md:py-32 text-center relative overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-br from-green-50 to-green-200 opacity-50"></div>
+            <div class="container mx-auto relative z-10 px-6">
+                <h1 class="text-5xl md:text-6xl font-extrabold text-green-800 leading-tight mb-6 animate-fade-in-down">
+                    Panenku: Hasil Kebun Langsung ke Mejamu
+                </h1>
+                <p class="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto mb-10 animate-fade-in-up">
+                    Menghubungkan petani lokal dengan Anda, menghadirkan produk segar, alami, dan berkualitas terbaik setiap hari.
+                </p>
+                <a href="#produk" class="inline-block bg-green-600 text-white font-bold py-4 px-10 rounded-full text-lg hover:bg-green-700 transition duration-300 transform hover:scale-105 shadow-lg animate-bounce-once">
+                    Jelajahi Produk Segar
+                </a>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="fitur" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl md:text-5xl font-bold text-center text-green-800 mb-16">Mengapa Memilih Panenku?</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                    <!-- Feature Card 1 -->
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 text-center transform hover:-translate-y-2">
+                        <div class="text-5xl text-green-500 mb-6">🌱</div>
+                        <h3 class="text-2xl font-semibold text-green-700 mb-4">Produk Organik & Segar</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Nikmati sayuran dan buah-buahan yang dipanen langsung dari kebun, bebas pestisida, dan penuh nutrisi.
+                        </p>
+                    </div>
+                    <!-- Feature Card 2 -->
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 text-center transform hover:-translate-y-2">
+                        <div class="text-5xl text-yellow-500 mb-6">👨‍🌾</div>
+                        <h3 class="text-2xl font-semibold text-green-700 mb-4">Dukung Petani Lokal</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Setiap pembelian Anda berkontribusi langsung pada kesejahteraan petani lokal dan keberlanjutan pertanian.
+                        </p>
+                    </div>
+                    <!-- Feature Card 3 -->
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 text-center transform hover:-translate-y-2">
+                        <div class="text-5xl text-blue-500 mb-6">🚚</div>
+                        <h3 class="text-2xl font-semibold text-green-700 mb-4">Pengiriman Cepat & Aman</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Kami memastikan produk Anda tiba di rumah dalam kondisi prima dengan layanan pengiriman terpercaya.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="tentang" class="py-16 md:py-24 bg-green-50">
+            <div class="container mx-auto flex flex-col md:flex-row items-center gap-12 px-6">
+                <div class="md:w-1/2">
+                    <img src="https://via.placeholder.com/600x400?text=Ladang+Panenku" alt="Tentang Panenku" class="rounded-xl shadow-xl w-full h-auto object-cover transform hover:scale-105 transition duration-300">
+                </div>
+                <div class="md:w-1/2 text-center md:text-left">
+                    <h2 class="text-4xl md:text-5xl font-bold text-green-800 mb-6">Kisah Kami: Menghadirkan Panen Terbaik</h2>
+                    <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                        Panenku lahir dari kecintaan kami pada bumi dan hasrat untuk menghubungkan Anda dengan kekayaan alam. Kami percaya bahwa setiap orang berhak mendapatkan akses ke makanan yang sehat, segar, dan diproduksi secara etis.
+                    </p>
+                    <p class="text-lg text-gray-700 leading-relaxed mb-8">
+                        Dengan kemitraan langsung bersama petani, kami memotong rantai pasokan yang panjang, memastikan Anda mendapatkan kualitas terbaik dengan harga yang adil, sekaligus mendukung komunitas petani lokal.
+                    </p>
+                    <a href="#kontak" class="inline-block bg-yellow-500 text-white font-bold py-3 px-8 rounded-full text-lg hover:bg-yellow-600 transition duration-300 transform hover:scale-105 shadow-md">
+                        Bergabung dengan Komunitas Kami
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Showcase Section -->
+        <section id="produk" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl md:text-5xl font-bold text-center text-green-800 mb-16">Panen Terbaru Kami</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Product Card 1 -->
+                    <div class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                        <img src="https://via.placeholder.com/400x300?text=Bayam+Segar" alt="Bayam Segar" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-green-700 mb-2">Bayam Organik</h3>
+                            <p class="text-gray-600 text-sm mb-4">Dipanen pagi ini dari kebun Pak Budi.</p>
+                            <span class="block text-2xl font-bold text-green-600">Rp 15.000 <span class="text-lg font-normal text-gray-500">/ ikat</span></span>
+                            <button class="mt-4 w-full bg-green-500 text-white py-2 rounded-full hover:bg-green-600 transition duration-300">Tambah ke Keranjang</button>
+                        </div>
+                    </div>
+                    <!-- Product Card 2 -->
+                    <div class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                        <img src="https://via.placeholder.com/400x300?text=Tomat+Cherry" alt="Tomat Cherry" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-green-700 mb-2">Tomat Cherry Manis</h3>
+                            <p class="text-gray-600 text-sm mb-4">Cocok untuk salad dan camilan sehat.</p>
+                            <span class="block text-2xl font-bold text-green-600">Rp 20.000 <span class="text-lg font-normal text-gray-500">/ 500gr</span></span>
+                            <button class="mt-4 w-full bg-green-500 text-white py-2 rounded-full hover:bg-green-600 transition duration-300">Tambah ke Keranjang</button>
+                        </div>
+                    </div>
+                    <!-- Product Card 3 -->
+                    <div class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                        <img src="https://via.placeholder.com/400x300?text=Cabai+Merah" alt="Cabai Merah" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-green-700 mb-2">Cabai Merah Keriting</h3>
+                            <p class="text-gray-600 text-sm mb-4">Pedasnya pas untuk masakan Anda.</p>
+                            <span class="block text-2xl font-bold text-green-600">Rp 18.000 <span class="text-lg font-normal text-gray-500">/ 250gr</span></span>
+                            <button class="mt-4 w-full bg-green-500 text-white py-2 rounded-full hover:bg-green-600 transition duration-300">Tambah ke Keranjang</button>
+                        </div>
+                    </div>
+                    <!-- Product Card 4 -->
+                    <div class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                        <img src="https://via.placeholder.com/400x300?text=Wortel+Lokal" alt="Wortel Lokal" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-green-700 mb-2">Wortel Lokal Crunchy</h3>
+                            <p class="text-gray-600 text-sm mb-4">Manis dan renyah, baik untuk kesehatan mata.</p>
+                            <span class="block text-2xl font-bold text-green-600">Rp 12.000 <span class="text-lg font-normal text-gray-500">/ 1kg</span></span>
+                            <button class="mt-4 w-full bg-green-500 text-white py-2 rounded-full hover:bg-green-600 transition duration-300">Tambah ke Keranjang</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action Section -->
+        <section class="bg-green-700 text-white py-16 text-center">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">Ingin Berkontribusi?</h2>
+                <p class="text-xl max-w-2xl mx-auto mb-10">
+                    Jika Anda seorang petani yang ingin memasarkan hasil panen Anda, atau seorang pecinta kuliner yang ingin berpartisipasi, kami menanti Anda!
+                </p>
+                <a href="#kontak" class="inline-block bg-white text-green-700 font-bold py-4 px-10 rounded-full text-lg hover:bg-gray-200 transition duration-300 transform hover:scale-105 shadow-lg">
+                    Hubungi Kami Sekarang
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer id="kontak" class="bg-green-800 text-gray-200 py-12">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 px-6">
+            <!-- Brand Info -->
+            <div>
+                <h3 class="text-2xl font-bold text-white mb-4">Panenku</h3>
+                <p class="text-sm leading-relaxed">
+                    Dedikasi kami untuk membawa produk segar langsung dari kebun ke meja Anda, sambil mendukung petani lokal.
+                </p>
+            </div>
+            <!-- Quick Links -->
+            <div>
+                <h3 class="text-xl font-semibold text-white mb-4">Tautan Cepat</h3>
+                <ul class="space-y-2">
+                    <li><a href="#home" class="hover:text-white transition duration-300">Beranda</a></li>
+                    <li><a href="#fitur" class="hover:text-white transition duration-300">Fitur Kami</a></li>
+                    <li><a href="#tentang" class="hover:text-white transition duration-300">Tentang Kami</a></li>
+                    <li><a href="#produk" class="hover:text-white transition duration-300">Produk</a></li>
+                </ul>
+            </div>
+            <!-- Contact Info -->
+            <div>
+                <h3 class="text-xl font-semibold text-white mb-4">Hubungi Kami</h3>
+                <ul class="space-y-2">
+                    <li>Email: <a href="mailto:info@panenku.com" class="hover:text-white transition duration-300">info@panenku.com</a></li>
+                    <li>Telepon: <a href="tel:+6281234567890" class="hover:text-white transition duration-300">+62 812-3456-7890</a></li>
+                    <li>Alamat: Jl. Kebun Raya No. 1, Jakarta</li>
+                </ul>
+            </div>
+            <!-- Social Media -->
+            <div>
+                <h3 class="text-xl font-semibold text-white mb-4">Ikuti Kami</h3>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-300 hover:text-white transition duration-300 text-2xl">
+                        <!-- Example Social Icon (using emoji for simplicity, ideally use Font Awesome) -->
+                        👍
+                    </a>
+                    <a href="#" class="text-gray-300 hover:text-white transition duration-300 text-2xl">
+                        <!-- Example Social Icon -->
+                        📸
+                    </a>
+                    <a href="#" class="text-gray-300 hover:text-white transition duration-300 text-2xl">
+                        <!-- Example Social Icon -->
+                        🐦
+                    </a>
+                </div>
+            </div>
         </div>
-        <div class="md:hidden">
-            <button class="focus:outline-none">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-            </button>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="h-screen flex flex-col justify-center items-center px-6 text-center">
-        <div class="fade-in">
-            <span class="text-xs uppercase tracking-[0.3em] mb-4 block text-zinc-500">Established 2024</span>
-            <h1 class="serif text-5xl md:text-8xl mb-8 leading-tight">
-                Simplicity is the <br> <span class="italic">ultimate</span> sophistication.
-            </h1>
-            <p class="max-w-md mx-auto text-zinc-500 mb-10 leading-relaxed">
-                Kami percaya pada keindahan fungsional dan desain yang tidak lekang oleh waktu. Menghadirkan solusi kreatif oleh Adeline Palmerston.
-            </p>
-            <a href="#resources" class="px-8 py-4 border border-zinc-900 text-sm uppercase tracking-widest hover:bg-zinc-900 hover:text-white transition-all duration-300">
-                Explore Work
-            </a>
-        </div>
-    </section>
-
-    <!-- Tab Section -->
-    <section id="resources" class="py-32 px-6 bg-white">
-        <div class="max-w-6xl mx-auto">
-            <!-- Tab Navigation -->
-            <div class="flex justify-center mb-16 space-x-12 border-b border-zinc-100">
-                <button onclick="switchTab('template')" id="btn-template" class="pb-4 text-sm font-semibold tracking-widest text-zinc-400 transition-all tab-active uppercase">
-                    Template
-                </button>
-                <button onclick="switchTab('presentasi')" id="btn-presentasi" class="pb-4 text-sm font-semibold tracking-widest text-zinc-400 transition-all uppercase">
-                    Presentasi
-                </button>
-            </div>
-
-            <!-- Tab Content: Template -->
-            <div id="content-template" class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <!-- Card 1 -->
-                <div class="bg-white rounded-[28px] overflow-hidden border border-zinc-100 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.05)] flex flex-col hover:shadow-lg transition-shadow duration-300">
-                    <div class="aspect-video w-full bg-zinc-100">
-                        <img src="https://images.unsplash.com/photo-1600132806370-bf17e65e942f?auto=format&fit=crop&q=80&w=800" alt="[Gambar Branding]" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6 flex justify-between items-center mt-auto">
-                        <div>
-                            <div class="font-bold text-zinc-900 text-lg">Gratis</div>
-                            <div class="text-zinc-400 text-xs font-medium">Kategori Template</div>
-                        </div>
-                        <a href="#" class="bg-zinc-900 text-white text-sm font-semibold px-5 py-2.5 rounded-xl hover:bg-zinc-800 transition-colors">
-                            Buka
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Card 2 -->
-                <div class="bg-white rounded-[28px] overflow-hidden border border-zinc-100 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.05)] flex flex-col hover:shadow-lg transition-shadow duration-300">
-                    <div class="aspect-video w-full bg-zinc-100">
-                        <img src="https://images.unsplash.com/photo-1544928147-79a2dbc1f389?auto=format&fit=crop&q=80&w=800" alt="[Gambar Tata Letak Editorial]" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6 flex justify-between items-center mt-auto">
-                        <div>
-                            <div class="font-bold text-zinc-900 text-lg">Rp 150k</div>
-                            <div class="text-zinc-400 text-xs font-medium">Kategori Template</div>
-                        </div>
-                        <a href="#" class="bg-zinc-900 text-white text-sm font-semibold px-5 py-2.5 rounded-xl hover:bg-zinc-800 transition-colors">
-                            Buka
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Card 3 -->
-                <div class="bg-white rounded-[28px] overflow-hidden border border-zinc-100 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.05)] flex flex-col hover:shadow-lg transition-shadow duration-300">
-                    <div class="aspect-video w-full bg-zinc-100">
-                        <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&q=80&w=800" alt="[Gambar Feed Sosial]" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6 flex justify-between items-center mt-auto">
-                        <div>
-                            <div class="font-bold text-zinc-900 text-lg">Gratis</div>
-                            <div class="text-zinc-400 text-xs font-medium">Kategori Template</div>
-                        </div>
-                        <a href="#" class="bg-zinc-900 text-white text-sm font-semibold px-5 py-2.5 rounded-xl hover:bg-zinc-800 transition-colors">
-                            Buka
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Tab Content: Presentasi (Hidden) -->
-            <div id="content-presentasi" class="hidden grid-cols-1 md:grid-cols-3 gap-6">
-                <!-- Card 4 -->
-                <div class="bg-white rounded-[28px] overflow-hidden border border-zinc-100 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.05)] flex flex-col hover:shadow-lg transition-shadow duration-300">
-                    <div class="aspect-video w-full bg-zinc-100">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800" alt="[Gambar Laporan Tahunan]" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6 flex justify-between items-center mt-auto">
-                        <div>
-                            <div class="font-bold text-zinc-900 text-lg">Rp 250k</div>
-                            <div class="text-zinc-400 text-xs font-medium">Kategori Presentasi</div>
-                        </div>
-                        <a href="#" class="bg-zinc-900 text-white text-sm font-semibold px-5 py-2.5 rounded-xl hover:bg-zinc-800 transition-colors">
-                            Buka
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Card 5 -->
-                <div class="bg-white rounded-[28px] overflow-hidden border border-zinc-100 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.05)] flex flex-col hover:shadow-lg transition-shadow duration-300">
-                    <div class="aspect-video w-full bg-zinc-100">
-                        <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&q=80&w=800" alt="[Gambar Pitch Deck]" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6 flex justify-between items-center mt-auto">
-                        <div>
-                            <div class="font-bold text-zinc-900 text-lg">Gratis</div>
-                            <div class="text-zinc-400 text-xs font-medium">Kategori Presentasi</div>
-                        </div>
-                        <a href="#" class="bg-zinc-900 text-white text-sm font-semibold px-5 py-2.5 rounded-xl hover:bg-zinc-800 transition-colors">
-                            Buka
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Card 6 -->
-                <div class="bg-white rounded-[28px] overflow-hidden border border-zinc-100 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.05)] flex flex-col hover:shadow-lg transition-shadow duration-300">
-                    <div class="aspect-video w-full bg-zinc-100">
-                        <img src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?auto=format&fit=crop&q=80&w=800" alt="[Gambar Portofolio Kreatif]" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6 flex justify-between items-center mt-auto">
-                        <div>
-                            <div class="font-bold text-zinc-900 text-lg">Rp 100k</div>
-                            <div class="text-zinc-400 text-xs font-medium">Kategori Presentasi</div>
-                        </div>
-                        <a href="#" class="bg-zinc-900 text-white text-sm font-semibold px-5 py-2.5 rounded-xl hover:bg-zinc-800 transition-colors">
-                            Buka
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer id="contact" class="py-24 px-6 bg-zinc-900 text-zinc-400">
-        <div class="max-w-6xl mx-auto">
-            <div class="grid md:grid-cols-3 gap-12 mb-20">
-                <div class="col-span-1 md:col-span-2">
-                    <h2 class="serif text-white text-4xl mb-6">Mari berkolaborasi.</h2>
-                    <p class="text-xl">hello@reallygreatsite.com</p>
-                </div>
-                <div>
-                    <h3 class="text-white text-sm uppercase tracking-widest mb-6">Lokasi Kami</h3>
-                    <p class="mb-2">123 Anywhere St., Any City</p>
-                    <p>+123-456-7890</p>
-                </div>
-            </div>
-            
-            <div class="flex flex-col md:flex-row justify-between items-center pt-12 border-t border-zinc-800 text-xs tracking-widest">
-                <p>&copy; 2024 LICERIA & CO. ALL RIGHTS RESERVED.</p>
-                <div class="flex space-x-8 mt-6 md:mt-0">
-                    <a href="#" class="hover:text-white transition-colors">INSTAGRAM</a>
-                    <a href="#" class="hover:text-white transition-colors">DRIBBBLE</a>
-                    <a href="#" class="hover:text-white transition-colors">LINKEDIN</a>
-                </div>
-            </div>
+        <div class="border-t border-green-700 mt-8 pt-8 text-center text-gray-400">
+            &copy; 2023 Panenku. Hak Cipta Dilindungi.
         </div>
     </footer>
 
-    <script>
-        // Nav Scroll Logic
-        window.onscroll = function() {
-            const nav = document.getElementById('main-nav');
-            if (window.scrollY > 50) {
-                nav.classList.add('bg-white', 'py-4', 'shadow-sm', 'mix-blend-normal', 'invert-0');
-                nav.classList.remove('py-6', 'mix-blend-difference', 'invert');
-            } else {
-                nav.classList.remove('bg-white', 'py-4', 'shadow-sm', 'mix-blend-normal', 'invert-0');
-                nav.classList.add('py-6', 'mix-blend-difference', 'invert');
+    <style>
+        /* Keyframe for subtle animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
             }
-        };
-
-        // Tab Switch Logic
-        function switchTab(tabName) {
-            const btnTemplate = document.getElementById('btn-template');
-            const btnPresentasi = document.getElementById('btn-presentasi');
-            const contentTemplate = document.getElementById('content-template');
-            const contentPresentasi = document.getElementById('content-presentasi');
-
-            if (tabName === 'template') {
-                btnTemplate.classList.add('tab-active');
-                btnPresentasi.classList.remove('tab-active');
-                contentTemplate.classList.remove('hidden');
-                contentTemplate.classList.add('grid');
-                contentPresentasi.classList.add('hidden');
-                contentPresentasi.classList.remove('grid');
-            } else {
-                btnPresentasi.classList.add('tab-active');
-                btnTemplate.classList.remove('tab-active');
-                contentPresentasi.classList.remove('hidden');
-                contentPresentasi.classList.add('grid');
-                contentTemplate.classList.add('hidden');
-                contentTemplate.classList.remove('grid');
+            to {
+                opacity: 1;
+                transform: translateY(0);
             }
         }
-    </script>
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes bounceOnce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+
+        .animate-fade-in-down {
+            animation: fadeInDown 1s ease-out forwards;
+        }
+        .animate-fade-in-up {
+            animation: fadeInUp 1s ease-out forwards;
+            animation-delay: 0.3s;
+            opacity: 0; /* Start hidden */
+        }
+        .animate-bounce-once {
+            animation: bounceOnce 1.5s ease-in-out 1.2s 1; /* Delay, then play once */
+        }
+    </style>
 </body>
 </html>

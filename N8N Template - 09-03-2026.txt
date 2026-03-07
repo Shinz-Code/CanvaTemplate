@@ -1,0 +1,153 @@
+JUDUL
+Referensi-01
+
+---------------------------------------{ REFERENSI 01 }----------------------------------------
+
+01. DOCTYPE
+Anti Perundungan - Poster (ID)
+
+01. SIZE
+Poster (Potret-A2) • 42 x 59,4 cm
+
+01. CATEGORY
+Education
+
+01. NOTE
+- Ukuran font minimal 26px
+
+01. REFERENSI
+- https://www.canva.com/templates/EAGUQJolO74/
+- https://www.canva.com/templates/EAGXSUFKldw/
+- https://www.canva.com/templates/EAGPJ2NL2l4/
+- https://www.canva.com/templates/EAGydBNLmEQ/
+- https://www.canva.com/templates/EAGexKWkc44/
+- https://www.canva.com/templates/EAF8AFxdTrA/
+
+01. PROMPT AI
+[Judul], [Deskripsi Singkat], 4 [Subjudul], dan 4 [Deskripsi]
+
+---------------------------------------{ REFERENSI 02 }----------------------------------------
+
+02. DOCTYPE
+Daily Vlog - Youtube Banner (EN)
+
+02. SIZE
+YouTube Banner • 2560 x 1440 px
+
+02. CATEGORY
+Entertainment
+
+02. NOTE
+- Text Jangan sampai keluar dari area 1546 x 432
+
+02. REFERENSI
+- https://i.pinimg.com/1200x/04/99/64/04996401196ee7a256211b082f36c393.jpg
+- https://www.canva.com/templates/EAFdeKFg-uU/
+- https://www.canva.com/templates/EAFGycBiiVk/
+- https://www.canva.com/templates/EAG03VJSxMk/
+- https://www.canva.com/templates/EAEhYjqMHt4/
+- https://www.canva.com/templates/EAGz35jk2W8/
+
+02. PROMPT AI
+ [Judul], [Deskripsi Singkat], 3 [Contact],
+
+---------------------------------------{ REFERENSI 03 }----------------------------------------
+
+03. DOCTYPE
+General Manager - Business Card (EN)
+
+03. SIZE
+Business Card (Landscape) • 3.5 x 2 in
+
+03. CATEGORY
+Marketing & Advertising
+
+03. NOTE
+- 
+
+03. REFERENSI
+- https://www.canva.com/templates/EAG0Rgtx0dc/
+- https://www.canva.com/templates/EAG_Gqltrb4/
+- https://www.canva.com/templates/EAG_JFDbgZs/
+- https://www.canva.com/templates/EAGYfTi4fC4/
+- https://www.canva.com/templates/EAF-1jK3Xx8/
+- https://www.canva.com/templates/EAGAVuMLaak/
+
+03. PROMPT AI
+ Halaman 1([Nama Bisnis], [alamat website]), Halaman 2([Nama Orang], [job], 4 [contact])
+
+---------------------------------------{ REFERENSI 04 }----------------------------------------
+
+04. DOCTYPE
+Birthday Celebration - Photo Collage (EN)
+
+04. SIZE
+Photo Collage (Portrait) • 20 x 30 cm
+
+04. CATEGORY
+-
+
+04. NOTE
+-
+
+04. REFERENSI
+- https://www.canva.com/templates/EAGiUVTSH2c/
+- https://www.canva.com/templates/EAGnA5zo7zw/
+- https://www.canva.com/templates/EAGRsOv97sY/
+- https://www.canva.com/templates/EAGOfBOZnx4/
+- https://www.canva.com/templates/EAGmDb5misU/
+- https://www.canva.com/templates/EAGmDoz0Chg/
+
+04. PROMPT AI
+ [Judul], [Short-Quote]
+
+---------------------------------------{ REFERENSI 05 }----------------------------------------
+
+05. DOCTYPE
+Appreciation - Certificate (EN)
+
+05. SIZE
+Certificate (Landscape) • 29.7 x 21 cm
+
+05. CATEGORY
+-
+
+05. NOTE
+-
+
+05. REFERENSI
+- https://www.canva.com/templates/EAGrzxwESNE/
+- https://www.canva.com/templates/EAGPYCUiQJw/
+- https://www.canva.com/templates/EAGPE7Jq3h8/
+- https://www.canva.com/templates/EAGBLvyEoe0/
+- https://www.canva.com/templates/EAGKEL6Kpdw/
+- https://www.canva.com/templates/EAFNiCYdbwg/
+
+05. PROMPT AI
+ [nama perusahaan], [Judul (Certificate of appreciation)], [subjudul], [nama orang], [deskripsi], 2[nama orang + Position]
+
+---------------------------------------{ REFERENSI 06 }----------------------------------------
+
+06. DOCTYPE
+Family Moment - Photo Collage (EN)
+
+06. SIZE
+Photo Collage (Portrait) • 20 x 30 cm
+
+06. CATEGORY
+-
+
+06. NOTE
+-
+
+06. REFERENSI
+- https://www.canva.com/templates/EAGD6F_dnNs/
+- https://www.canva.com/templates/EAFcJdIMd2w/
+- https://www.canva.com/templates/EAGUNKwy96E/
+- https://www.canva.com/templates/EAGPDxj_kII/
+- https://www.canva.com/templates/EAGiQKD2j8Y/
+- https://www.canva.com/templates/EAGq8r_jlKY/
+
+06. PROMPT AI
+[Abaikan ini, tidak butuh copywriter isi saja dengan tanda - ]
+

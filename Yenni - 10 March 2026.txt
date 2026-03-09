@@ -1,0 +1,138 @@
+JUDUL
+Referensi-01
+
+---------------------------------------{ REFERENSI 01 }----------------------------------------
+
+01. DOCTYPE
+Photo Dump Photo Collage - Instagram Story (EN)
+
+01. SIZE
+Your story • 1080 x 1920 px
+
+01. NOTE
+- Gunakan Banyak Frame(atau foto), tambahkan element minimalist, foto/ gambar tentang moment kebersamaan
+
+01. REFERENSI
+- https://www.canva.com/templates/EAGTNCo7hKs/
+- https://www.canva.com/templates/EAGk-efUX1w/
+- https://www.canva.com/templates/EAGnY5xrQKE/
+- https://www.canva.com/templates/EAGh8NNbJfE/
+- https://www.canva.com/templates/EAGcsIkMkU4/
+- https://www.canva.com/templates/EAGk-czWa8A/
+
+01. PROMPT AI
+ [Abaikan ini, tidak butuh copywriter isi saja dengan tanda - ]
+
+---------------------------------------{ REFERENSI 02 }----------------------------------------
+
+02. DOCTYPE
+Nature Watercolor - Phone wallpaper [EN]a
+
+02. SIZE
+Phone Wallpaper • 1080 x 1920 px
+
+02. NOTE
+- cari element watercolor yang warna nya tidak terlalu beda jauh dengan background untuk membuat backgroundnya, ", "kemudian tambahkan element seperti bunga / tanaman
+
+02. REFERENSI
+- https://www.canva.com/templates/EAFRiquIdHY/
+- https://www.canva.com/templates/EAFQ4n2kD64/
+- https://www.canva.com/templates/EAGxRud1T5E/
+- https://www.canva.com/templates/EAGEh6Yyi1s/
+- https://www.canva.com/templates/EAGpBCtKjUc/
+- https://www.canva.com/templates/EAGk4AX9-iE/
+
+02. PROMPT AI
+  [Abaikan ini, tidak butuh copywriter isi saja dengan tanda - ]
+
+---------------------------------------{ REFERENSI 03 }----------------------------------------
+
+03. DOCTYPE
+Minimalist Study with me - Youtube Thumbnail
+
+03. SIZE
+YouTube Thumbnail • 1280 x 720 px
+
+03. CATEGORY
+
+
+03. NOTE
+- Cari gambar orang sedang belajar, cari gambar yang tidak terlalu banyak isinya, agar fokus pelihat, itu langsung ke text nya
+
+03. REFERENSI
+- https://www.youtube.com/results?search_query=study+with+me
+- -
+- -
+- -
+- -
+- -
+
+03. PROMPT AI
+ [Judul tetap sama Study with Me], [Subjudul]
+
+---------------------------------------{ REFERENSI 04 }----------------------------------------
+
+04. DOCTYPE
+Scrapbook History - Infographic
+
+04. SIZE
+Infographic (Digital) • 800 x 2000 px
+
+04. NOTE
+- Ukuran font minimal 16px (ngga boleh kurang dari 16px)", " saat pertama kali membuat lebih baik menata text dahulu baru element
+
+04. REFERENSI
+- https://www.canva.com/templates/EAG6EbYe1bQ/
+- https://www.canva.com/templates/EAFbZFQOjfo/
+- https://www.canva.com/templates/EAGyj8ykBn0/
+- https://www.canva.com/templates/EAGnemnhEQI/
+- https://www.canva.com/templates/EAF3FRjZodY/
+- https://www.canva.com/templates/EAGzU0094sc/
+
+04. PROMPT AI
+ [Judul], [Subjudul dari judul], 4[tahun], 4[subjudul], dan 4 [deskripsi]
+
+---------------------------------------{ REFERENSI 05 }----------------------------------------
+
+05. DOCTYPE
+Minimalist Coffee Shop - Logo
+
+05. SIZE
+Logo • 2000 x 2000 px
+
+05. NOTE
+- -
+
+05. REFERENSI
+- https://www.canva.com/templates/EAFO52thiN0/
+- https://www.canva.com/templates/EAG2sDah1CY/
+- https://www.canva.com/templates/EAGL75NlphI/
+- https://www.canva.com/templates/EAE20-FrBQg/
+- https://www.canva.com/templates/EAGwhtbparg/
+- https://www.canva.com/templates/EAEhu5zcpsU/
+
+05. PROMPT AI
+ [nama brand], [tagline], [optional (seperti estd atau since)]
+
+---------------------------------------{ REFERENSI 06 }----------------------------------------
+
+06. DOCTYPE
+Minimalist Weekly Planner - Planner
+
+06. SIZE
+Planner (Portrait) • 21 x 29.7 cm
+
+06. NOTE
+- -
+
+06. REFERENSI
+- https://www.canva.com/templates/EAHCJIDFwSs
+- https://www.canva.com/templates/EAEmnxi0HeM/
+- https://www.canva.com/templates/EAG2A6CVlPo/
+- https://www.canva.com/templates/EAFafx1xtw8/
+- https://www.canva.com/templates/EAFn8zLkf8I/
+- https://www.canva.com/templates/EAFzaw7eitU/
+
+06. PROMPT AI
+ [Abaikan ini, tidak butuh copywriter isi saja dengan tanda - ]
+

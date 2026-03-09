@@ -1,0 +1,137 @@
+JUDUL
+Referensi-01
+
+---------------------------------------{ REFERENSI 01 }----------------------------------------
+
+01. DOCTYPE
+Modern Dental Clinic - Poster (EN)
+
+01. SIZE
+Poster (Portrait A2) • 42 x 59.4 cm
+
+01. NOTE
+- Element biasanya issue kalau nempel sedikit ketepi, tapi tidak kalo banyak bagian
+
+01. REFERENSI
+- https://www.canva.com/templates/EAGfb0za9CU/
+- https://www.canva.com/templates/EAGNVASLy-g/
+- https://www.canva.com/templates/EAG11LE6IEo/
+- https://www.canva.com/templates/EAGwBxbhQGQ/
+- https://www.canva.com/templates/EAF3KM55spc/
+- https://www.canva.com/templates/EAG_yNHc6nA/
+
+01. PROMPT AI
+ [Nama Brand], [Judul], [Deskripsi singkat], [Subjudul], 4[Point list], [Cta Button], 2[Contact]
+
+---------------------------------------{ REFERENSI 02 }----------------------------------------
+
+02. DOCTYPE
+Watercolor - Phone Wallpaper
+
+02. SIZE
+Phone Wallpaper • 1080 x 1920 PX
+
+02. NOTE
+- Quote optional boleh dipakai, boleh juga tidak
+
+02. REFERENSI
+- https://www.canva.com/templates/EAFQ4n2kD64/
+- https://www.canva.com/templates/EAG2VNMbxl4/
+- https://www.canva.com/templates/EAGKUaW33VQ/
+- https://www.canva.com/templates/EAFevhfc1zs/
+- https://www.canva.com/templates/EAG2f19JrHU/
+- https://www.canva.com/templates/EAGJ3rbCrtY/
+
+02. PROMPT AI
+ [Quote]
+
+---------------------------------------{ REFERENSI 03 }----------------------------------------
+
+03. DOCTYPE
+Futuristic Gaming Channel - Youtube Banner (EN)
+
+03. SIZE
+YouTube Banner • 2560 x 1440
+
+03. NOTE
+- Element text utama jangan sampai keluat dari area 1540 x 423 px
+
+03. REFERENSI
+- https://www.canva.com/templates/EAGmMXj5LVo/
+- https://www.canva.com/templates/EAFKP4iCkCs/
+- https://www.canva.com/templates/EAFO5jzKV50/
+- https://www.canva.com/templates/EAE8H5VWAMk/
+- https://www.canva.com/templates/EAGswHleiVA/
+- https://www.canva.com/templates/EAE4sM0x2pw/
+
+03. PROMPT AI
+ [Nama Channel][tagline][tagline]
+
+---------------------------------------{ REFERENSI 04 }----------------------------------------
+
+04. DOCTYPE
+Aesthetic Photo Collage - Instagram Story
+
+04. SIZE
+Your Story • 1080 x 1920 px
+
+04. NOTE
+- -
+
+04. REFERENSI
+- https://www.canva.com/templates/EAGTNCo7hKs/
+- https://www.canva.com/templates/EAGpjzSOsQY/
+- https://www.canva.com/templates/EAGGT029x14/
+- https://www.canva.com/templates/EAG2ivzwejM/
+- https://www.canva.com/templates/EAGrJvZNaHE/
+- https://www.canva.com/templates/EAGu0QMkxNI/
+
+04. PROMPT AI
+ - Tidak butuh copywriter
+
+---------------------------------------{ REFERENSI 05 }----------------------------------------
+
+05. DOCTYPE
+Modern Marketing Agency - Flyer (EN)
+
+05. SIZE
+Flyer (Portrait A4) • 210 x 297 mm
+
+05. NOTE
+- Warna tidak boleh lebih dari 3", "
+- Jenis Font tidak boleh lebih dari 3", "
+- Gunakan Warna dari REferensi
+
+05. REFERENSI
+- https://www.canva.com/templates/EAGdFx9Z3l4/
+- https://www.canva.com/templates/EAGkzJljIGE/
+- https://www.canva.com/templates/EAGWbFs746A/
+- https://www.canva.com/templates/EAGs17cBYEw/
+- https://www.canva.com/templates/EAG_DURrniI/
+- https://www.canva.com/templates/EAFMp6zN6sA/
+
+05. PROMPT AI
+ Nama brand, Judul, deskripsi, subjudul, 3 point list, Subjudul(about us), deskripsi, Contact
+
+---------------------------------------{ REFERENSI 06 }----------------------------------------
+
+06. DOCTYPE
+Modern Quote - Instagram Post (EN)
+
+06. SIZE
+lnstagram Post (4:5) • 1080 x 1350
+
+06. NOTE
+- Gunakan background foto yang tidak terlalu ramai
+
+06. REFERENSI
+- https://www.canva.com/templates/EAGfoxXQn3E/
+- https://www.canva.com/templates/EAGbaAwp6VY/
+- https://www.canva.com/templates/EAGyTiq-d2A/
+- https://www.canva.com/templates/EAEcHdmiVWg/
+- https://www.canva.com/templates/EAGpV8qWJVo/
+- https://www.canva.com/templates/EAGlicyWmw0/
+
+06. PROMPT AI
+ Quote, Social media handle
+

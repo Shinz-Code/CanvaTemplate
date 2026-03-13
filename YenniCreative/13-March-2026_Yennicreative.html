@@ -1,0 +1,402 @@
+",
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Mengimpor font elegan dari Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=DM+Serif+Display:ital@0;1&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <!-- Memuat Tailwind CSS melalui CDN untuk styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['DM Serif Display', 'serif'],
+                        playfair: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        gray: {
+                            50: '#fafafa',
+                            100: '#f4f4f5',
+                            500: '#71717a',
+                            800: '#27272a',
+                            900: '#18181b',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <title>ErmediaTeam</title>
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans antialiased min-h-screen flex flex-col selection:bg-gray-200 overflow-x-hidden">
+
+    <!-- Container Utama -->
+    <div class="flex-grow flex flex-col w-full relative">
+        
+        <!-- Navbar -->
+        <header class="sticky top-0 z-40 bg-gray-50/80 backdrop-blur-md border-b border-gray-100">
+            <nav class="max-w-[1500px] mx-auto px-6 py-5 flex items-center justify-between">
+                <div>
+                    <a href="#" class="text-xl font-bold tracking-tight text-gray-900 hover:opacity-80 transition-opacity">
+                        ErmediaTeam<span class="text-gray-400">.</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex gap-8 items-center">
+                    <a href="https://ermediateam.bismillahku.com/" class="text-sm font-medium text-gray-500 hover:text-gray-900 transition-colors">Tema</a>
+                    <a href="https://ermediateam.bismillahku.com/" class="text-sm font-medium text-gray-500 hover:text-gray-900 transition-colors">Element</a>
+                    <a href="https://ermediateam.bismillahku.com/" class="text-sm font-medium text-gray-500 hover:text-gray-900 transition-colors">Warna</a>
+                    <a href="https://ermediateam.bismillahku.com/" class="text-sm font-medium text-gray-500 hover:text-gray-900 transition-colors">Font</a>
+                </div>
+                <!-- Tombol Menu Mobile -->
+                <button class="md:hidden text-gray-500 hover:text-gray-900">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" x2="21" y1="6" y2="6"/><line x1="3" x2="21" y1="12" y2="12"/><line x1="3" x2="21" y1="18" y2="18"/></svg>
+                </button>
+            </nav>
+        </header>
+
+        <!-- Konten Utama -->
+        <main class="flex-grow w-full max-w-[1500px] mx-auto px-6">
+            
+            <!-- Bagian Hero -->
+            <section id="hero" class="flex flex-col items-center text-center mt-6">
+                <img src="https://ermediateam06.github.io/Referensi-Design/banner.webp" class="object-cover w-full h-48 md:h-48 rounded-2xl" alt="">
+            </section>
+
+            <!-- Bagian Daftar Tema -->
+            <section id="daftar-tema" class="py-16 md:py-24 border-t border-gray-100">
+                <div class="flex items-center justify-between mb-8">
+                    <h2 class="text-xl font-bold tracking-tight text-gray-900 hover:opacity-80 transition-opacity uppercase"></h2>
+                    <a href="#" class="text-sm font-medium text-gray-500 hover:text-gray-900 flex items-center gap-1 group">
+                        Lihat semua
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="group-hover:translate-x-1 transition-transform"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                    </a>
+                </div>
+                
+                <!-- Wadah Grid -->
+                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-8">
+                    
+                    <!-- Item Tema 1 -->
+                    <div onclick="openSidebar(1)" class="cursor-pointer group flex flex-col overflow-hidden bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl hover:border-gray-200 transition-all duration-300">
+                        <div class="relative w-full aspect-[4/3] bg-gray-100 overflow-hidden">
+                            <img src="https://ermediateam06.github.io/Referensi-Design/background.png" alt="Tema 1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out">
+                        </div>
+                        <div class="p-5 flex items-center justify-between">
+                            <div>
+                                <h3 class="font-semibold text-gray-900 text-sm md:text-base">Thesis Defense - Presentation (EN)</h3>
+                                <p class="text-[10px] md:text-[11px] font-semibold text-emerald-600 mt-1 bg-emerald-50 px-2 py-1 rounded-md w-fit">Presentation • 1920 x 1080 px</p>
+                            </div>
+                            <div class="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 group-hover:bg-gray-900 group-hover:text-white transition-colors duration-300 shrink-0 ml-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item Tema 2 -->
+                    <div onclick="openSidebar(2)" class="cursor-pointer group flex flex-col overflow-hidden bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl hover:border-gray-200 transition-all duration-300">
+                        <div class="relative w-full aspect-[4/3] bg-gray-100 overflow-hidden">
+                            <img src="https://ermediateam06.github.io/Referensi-Design/background.png" alt="Tema 1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out">
+                        </div>
+                        <div class="p-5 flex items-center justify-between">
+                            <div>
+                                <h3 class="font-semibold text-gray-900 text-sm md:text-base">Group Project - Presentation (EN)</h3>
+                                <p class="text-[10px] md:text-[11px] font-semibold text-emerald-600 mt-1 bg-emerald-50 px-2 py-1 rounded-md w-fit">Presentation • 1920 x 1080 px</p>
+                            </div>
+                            <div class="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 group-hover:bg-gray-900 group-hover:text-white transition-colors duration-300 shrink-0 ml-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item Tema 3 -->
+                    <div onclick="openSidebar(3)" class="cursor-pointer group flex flex-col overflow-hidden bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl hover:border-gray-200 transition-all duration-300">
+                        <div class="relative w-full aspect-[4/3] bg-gray-100 overflow-hidden">
+                            <img src="https://ermediateam06.github.io/Referensi-Design/background.png" alt="Tema 1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out">
+                        </div>
+                        <div class="p-5 flex items-center justify-between">
+                            <div>
+                                <h3 class="font-semibold text-gray-900 text-sm md:text-base">Pitch Deck - Presentation</h3>
+                                <p class="text-[10px] md:text-[11px] font-semibold text-emerald-600 mt-1 bg-emerald-50 px-2 py-1 rounded-md w-fit">Presentation • 1920 x 1080 px</p>
+                            </div>
+                            <div class="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 group-hover:bg-gray-900 group-hover:text-white transition-colors duration-300 shrink-0 ml-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item Tema 4 -->
+                    <div onclick="openSidebar(4)" class="cursor-pointer group flex flex-col overflow-hidden bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl hover:border-gray-200 transition-all duration-300">
+                        <div class="relative w-full aspect-[4/3] bg-gray-100 overflow-hidden">
+                            <img src="https://ermediateam06.github.io/Referensi-Design/background.png" alt="Tema 1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out">
+                        </div>
+                        <div class="p-5 flex items-center justify-between">
+                            <div>
+                                <h3 class="font-semibold text-gray-900 text-sm md:text-base">04. SIZE</h3>
+                                <p class="text-[10px] md:text-[11px] font-semibold text-emerald-600 mt-1 bg-emerald-50 px-2 py-1 rounded-md w-fit">04. NOTE
+- #</p>
+                            </div>
+                            <div class="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 group-hover:bg-gray-900 group-hover:text-white transition-colors duration-300 shrink-0 ml-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item Tema 5 -->
+                    <div onclick="openSidebar(5)" class="cursor-pointer group flex flex-col overflow-hidden bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl hover:border-gray-200 transition-all duration-300">
+                        <div class="relative w-full aspect-[4/3] bg-gray-100 overflow-hidden">
+                            <img src="https://ermediateam06.github.io/Referensi-Design/background.png" alt="Tema 1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out">
+                        </div>
+                        <div class="p-5 flex items-center justify-between">
+                            <div>
+                                <h3 class="font-semibold text-gray-900 text-sm md:text-base">05. SIZE</h3>
+                                <p class="text-[10px] md:text-[11px] font-semibold text-emerald-600 mt-1 bg-emerald-50 px-2 py-1 rounded-md w-fit">05. NOTE
+-</p>
+                            </div>
+                            <div class="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 group-hover:bg-gray-900 group-hover:text-white transition-colors duration-300 shrink-0 ml-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item Tema 6 -->
+                    <div onclick="openSidebar(6)" class="cursor-pointer group flex flex-col overflow-hidden bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl hover:border-gray-200 transition-all duration-300">
+                        <div class="relative w-full aspect-[4/3] bg-gray-100 overflow-hidden">
+                            <img src="https://ermediateam06.github.io/Referensi-Design/background.png" alt="Tema 1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out">
+                        </div>
+                        <div class="p-5 flex items-center justify-between">
+                            <div>
+                                <h3 class="font-semibold text-gray-900 text-sm md:text-base">06. SIZE</h3>
+                                <p class="text-[10px] md:text-[11px] font-semibold text-emerald-600 mt-1 bg-emerald-50 px-2 py-1 rounded-md w-fit">06. NOTE
+-</p>
+                            </div>
+                            <div class="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 group-hover:bg-gray-900 group-hover:text-white transition-colors duration-300 shrink-0 ml-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </main>
+
+        <!-- Sidebar Detail -->
+        <div id="overlay" onclick="closeSidebar()" class="fixed inset-0 bg-black/20 backdrop-blur-sm z-[60] opacity-0 pointer-events-none transition-opacity duration-300"></div>
+        <aside id="sidebar" class="fixed top-0 right-0 h-full w-full max-w-md bg-white shadow-2xl z-[70] translate-x-full transition-transform duration-500 ease-out flex flex-col">
+            <div class="p-6 flex items-center justify-between border-b border-gray-100">
+                <h2 class="text-lg font-bold tracking-tight uppercase" id="sidebar-title">Detail Desain</h2>
+                <button onclick="closeSidebar()" class="p-2 hover:bg-gray-100 rounded-full transition-colors text-gray-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" x2="6" y1="6" y2="18"/><line x1="6" x2="18" y1="6" y2="18"/></svg>
+                </button>
+            </div>
+            <div class="flex-grow overflow-y-auto p-6" id="sidebar-content">
+                <!-- Konten dinamis masuk di sini -->
+            </div>
+   
+        </aside>
+
+        <!-- Footer -->
+        <footer class="bg-gray-900 mt-12 py-12">
+            <div class="max-w-[1500px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex flex-col items-center md:items-start">
+                    <h2 class="text-lg font-bold tracking-tight text-white mb-2">ErmediaTheme.</h2>
+                    <p class="text-sm text-gray-400">Copyright © 2026 ErmediaTheme. All rights reserved.</p>
+                </div>
+                <div class="flex flex-wrap justify-center gap-6">
+                    <a href="#" class="text-sm text-gray-400 hover:text-white transition-colors">Whatsapp</a>
+                    <a href="#" class="text-sm text-gray-400 hover:text-white transition-colors">Instagram</a>
+                    <a href="https://www.bismillahku.com" class="text-sm text-gray-400 hover:text-white transition-colors">Website</a>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <script>
+        // Data Dummy untuk masing-masing card
+        const cardData = {
+            1: {
+                title: "Thesis Defense - Presentation (EN)",
+                badge: "Presentation • 1920 x 1080 px",
+                badgeClass: "text-[#e67073] bg-[#e7191f25]",
+                description: "Selalu buka tab issue saat pertama kali membuka template untuk memastikan tidak ada masalah yang terlewatkan.",
+                catatan: ["Lihat Referensi no.1 dan jiplak (Dibuat sama persis) tata letak text, gambarnya dan ukuranya", "Lihat Referensi no.2 perhatikan warna, element background dan element di bagian tepinya, klik dan copy namanya, kemudian cari di pencarian element dan gunakan pada desain, penataan dibuat persis seperti referensi no.2", "Lihat Referensi no.3, Gunakan font & ukuran yang sama seperti referensi no.3, mulai dari font judul, subjudul, dan deskripsi", "Text/ kata kata dibuat sama persis seperti referensi no.1, kecuali nama"],
+                copytext: ["Opsi_1: <br><br>Thesis Defense Presentation (EN)", "Opsi_2: <br><br>Thesis Defense Presentation (EN)"],
+                previewImg: "https://ermediateam06.github.io/Referensi-Design/background.png",
+                linkRef: [
+                  "https://www.canva.com/templates/EAG5_MTFrgk-blue-pastel-botanical-aesthetic-presentation/", 
+                  "https://www.canva.com/templates/EAG8CMFJKGs-green-aesthetic-watercolor-leaves-presentation/", 
+                  "https://www.canva.com/templates/EAGrp45HtqM-red-and-beige-simple-creative-portfolio-presentation/", 
+                  "#", 
+                  "#", 
+                  "#", 
+                ],
+            },
+
+            2: {
+                title: "Group Project - Presentation (EN)",
+                badge: "Presentation • 1920 x 1080 px",
+                badgeClass: "text-[#e67073] bg-[#e7191f25]",
+                description: "Selalu buka tab issue saat pertama kali membuka template untuk memastikan tidak ada masalah yang terlewatkan.",
+                catatan: ["Lihat Referensi no.1 dan jiplak (Dibuat sama persis) tata letak text, gambarnya dan ukuranya", "Lihat Referensi no.2 perhatikan warna Background, font Disetiap halamannya, dan gunakan pada desain", "Lihat Referensi no.3, Gunakan font & ukuran yang sama seperti referensi no.3, mulai dari font judul, subjudul, dan deskripsi", "Text/ kata kata dibuat sama persis seperti referensi no.1, kecuali nama dan angka"],
+                copytext: ["Opsi_3: <br><br>Group Project Presentation (EN)", "Opsi_4:<br><br>Group Project Presentation (EN)"],
+                previewImg: "https://ermediateam06.github.io/Referensi-Design/background.png",
+                linkRef: [
+                  "https://www.canva.com/templates/EAGqtM5d_So-purple-and-white-typography-group-project-presentation/", 
+                  "https://www.canva.com/templates/EAGjw5YGcA4-blue-and-white-elegant-group-project-presentation/", 
+                  "https://www.canva.com/templates/EAGxZkI1q3A-cream-and-brown-minimal-elegant-creative-portfolio-presentation/", 
+                  "#", 
+                  "#", 
+                  "#", 
+                ],
+            },
+            
+            3: {
+                title: "Pitch Deck - Presentation",
+                badge: "Presentation • 1920 x 1080 px",
+                badgeClass: "text-[#e67073] bg-[#e7191f25]",
+                description: "Selalu buka tab issue saat pertama kali membuka template untuk memastikan tidak ada masalah yang terlewatkan.",
+                catatan: ["Lihat Referensi no.1 dan jiplak (Dibuat sama persis) tata letak text, gambarnya dan ukuranya", "Lihat Referensi no.2 perhatikan warna Background, font Disetiap halamannya, dan gunakan pada desain", "Lihat Referensi no.3, Gunakan font & ukuran yang sama seperti referensi no.3, mulai dari font judul, subjudul, dan deskripsi", "Text/ kata kata dibuat sama persis seperti referensi no.1, kecuali nama dan angka"],
+                copytext: ["Opsi_5: <br><br>Pitch Deck Presentation", "Opsi_6: <br><br>Pitch Deck Presentation"],
+                previewImg: "https://ermediateam06.github.io/Referensi-Design/background.png",
+                linkRef: [
+                  "https://www.canva.com/templates/EAGwyDXje2E-beige-and-brown-plain-minimalist-modern-company-pitch-deck-presentation/", 
+                  "https://www.canva.com/templates/EAGzTkhuEvQ-red-modern-group-project-presentation/", 
+                  "https://www.canva.com/templates/EAGIH390riE-green-and-white-minimalist-lawyer-presentation/", 
+                  "#", 
+                  "#", 
+                  "#", 
+                ],
+            },
+            4: {
+                title: "04. SIZE",
+                badge: "04. NOTE
+- #",
+                badgeClass: "text-[#e67073] bg-[#e7191f25]",
+                description: "Selalu buka tab issue saat pertama kali membuka template untuk memastikan tidak ada masalah yang terlewatkan.",
+                catatan: ["#"],
+                copytext: ["Opsi_7: <br><br>04. SIZE<br><br>[Your Perfect Fit]__<br><br>Signature Style<br><br>Our sizing is designed to ensure maximum comfort and a flattering silhouette for every body type.<br><br>Small: Chest 34-36' | Waist 28-30'<br><br>Medium: Chest 38-40' | Waist 32-34'<br><br>Large: Chest 42-44' | Waist 36-38'<br><br>XL: Chest 46-48' | Waist 40-42'<br><br>Check our website www.reallygreatsite.com for a detailed fit guide.", "Opsi_8: <br><br>04. SIZE<br><br>[Measurement Guide]__<br><br>Modern Form<br><br>Find the right size for Farah Begum and Daniel Okoye with our easy-to-read chart. <br><br>Top Length: 28 inches<br><br>Shoulder Width: 18 inches<br><br>Sleeve Length: 24 inches<br><br>Bottom Opening: 10 inches<br><br>Need help? Email us at hello@reallygreatsite.com."],
+                previewImg: "https://ermediateam06.github.io/Referensi-Design/background.png",
+                linkRef: [
+                  "undefined", 
+                  "undefined", 
+                  "undefined", 
+                  "undefined", 
+                  "undefined", 
+                  "undefined", 
+                ],
+            },
+
+            5: {
+                title: "05. SIZE",
+                badge: "05. NOTE
+-",
+                badgeClass: "text-[#e67073] bg-[#e7191f25]",
+                description: "Selalu buka tab issue saat pertama kali membuka template untuk memastikan tidak ada masalah yang terlewatkan.",
+                catatan: [""],
+                copytext: ["Opsi_9: <br><br>05. SIZE<br><br>[Detailed Specifications]__<br><br>Circuit Networks<br><br>Precision engineering in every dimension. See how our latest product fits your workspace.<br><br>Height: 15.5 cm<br><br>Width: 7.2 cm<br><br>Depth: 0.8 cm<br><br>Weight: 180 grams<br><br>Available now at 123 Anywhere St., Any City.", "Opsi_10: <br><br>05. SIZE<br><br>[Product Dimensions]__<br><br>Gravity Soft<br><br>Compact design meets high-end performance. Engineered to be slim yet powerful.<br><br>Screen Size: 6.7 inch Display<br><br>Bezel Width: 1.5 mm<br><br>Battery Capacity: 5000 mAh<br><br>Port: USB-C Universal<br><br>Follow @reallygreatsite for more tech updates."],
+                previewImg: "https://ermediateam06.github.io/Referensi-Design/background.png",
+                linkRef: [
+                  "undefined", 
+                  "undefined", 
+                  "undefined", 
+                  "undefined", 
+                  "undefined", 
+                  "undefined", 
+                ],
+            },
+
+            6: {
+                title: "06. SIZE",
+                badge: "06. NOTE
+-",
+                badgeClass: "text-[#e67073] bg-[#e7191f25]",
+                description: "Selalu buka tab issue saat pertama kali membuka template untuk memastikan tidak ada masalah yang terlewatkan.",
+                catatan: [""],
+                copytext: ["Opsi_11: <br><br>06. SIZE<br><br>[Standard Sizing Chart]__<br><br>Trendy Market<br><br>Small (S) | Medium (M) | Large (L) | X-Large (XL)<br><br>Perfectly tailored for your everyday needs.", "Opsi_12: <br><br>06. SIZE<br><br>[Quick Reference Guide]__<br><br>Union Stores<br><br>One Size Fits All Adjustable straps for maximum versatility.<br><br>Contact: +123-456-7890."],
+                previewImg: "https://ermediateam06.github.io/Referensi-Design/background.png",
+                linkRef: [
+                  "undefined", 
+                  "undefined", 
+                  "undefined", 
+                  "undefined", 
+                  "undefined", 
+                  "undefined", 
+                ],
+            },
+        };
+
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('overlay');
+        const sidebarContent = document.getElementById('sidebar-content');
+        const sidebarTitle = document.getElementById('sidebar-title');
+        const sidebarLink = document.getElementById('sidebar-link');
+
+        function openSidebar(id) {
+            const data = cardData[id];
+            if (!data) return;
+
+            // Update Konten Sidebar
+            sidebarTitle.innerText = "Detail Desain";
+            
+            
+            sidebarContent.innerHTML = `
+                <img src="${data.previewImg}" class="w-full rounded-xl mb-6 shadow-md" alt="Preview">
+                <span class="${data.badgeClass} px-3 py-1 rounded-md text-[11px] font-bold mb-4 inline-block uppercase tracking-wider">${data.badge}</span>
+                <h3 class="text-2xl font-bold mb-3 font-serif">${data.title}</h3>
+                <p class="text-gray-500 text-sm leading-relaxed mb-8">${data.description}</p>
+                
+                <h4 class="font-bold text-sm uppercase tracking-widest text-gray-400 mb-4">Catatan</h4>
+                <ul class="space-y-3">
+                    ${data.catatan.map(f => `
+                        <li class="flex items-center gap-3 text-sm font-medium">
+                            <div class="w-5 h-5 rounded-full bg-gray-900 text-white flex items-center justify-center shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            </div>
+                            ${f}
+                        </li>
+                    `).join('')}
+                </ul>
+
+                <h4 class="font-bold text-sm uppercase tracking-widest text-gray-400 mb-4 mt-16">Referensi</h4>
+                <ul class="space-y-3">
+                    ${data.linkRef.map(f => `
+                        <a href="${f}" target="_blank" class="flex items-center gap-3 text-sm font-medium text-blue-600 bg-blue-50 px-3 py-1 rounded-md">
+                            ${f}
+                        </a>
+                    `).join('')}
+                </ul>
+
+                <h4 class="font-bold text-sm uppercase tracking-widest text-gray-400 mb-4 mt-16">Copywriter</h4>
+                <ul class="space-y-3">
+                    ${data.copytext.map(f => `
+                        <p class="flex items-center gap-3 text-sm font-medium text-black-600 bg-gray-100 px-3 py-1 rounded-md mb-4 pt-4 pb-4">
+                            ${f}
+                        </p>
+                    `).join('')}
+                </ul>
+            `;
+
+            // Tampilkan Sidebar
+            sidebar.classList.remove('translate-x-full');
+            overlay.classList.remove('opacity-0', 'pointer-events-none');
+            document.body.style.overflow = 'hidden'; // Mencegah scroll background
+        }
+
+        function closeSidebar() {
+            sidebar.classList.add('translate-x-full');
+            overlay.classList.add('opacity-0', 'pointer-events-none');
+            document.body.style.overflow = ''; // Mengembalikan scroll
+        }
+
+        // Tutup dengan tombol Escape
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeSidebar();
+        });
+    </script>
+</body>
+</html>

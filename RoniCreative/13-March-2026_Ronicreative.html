@@ -1,0 +1,404 @@
+",
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Mengimpor font elegan dari Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=DM+Serif+Display:ital@0;1&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <!-- Memuat Tailwind CSS melalui CDN untuk styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['DM Serif Display', 'serif'],
+                        playfair: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        gray: {
+                            50: '#fafafa',
+                            100: '#f4f4f5',
+                            500: '#71717a',
+                            800: '#27272a',
+                            900: '#18181b',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <title>ErmediaTeam</title>
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans antialiased min-h-screen flex flex-col selection:bg-gray-200 overflow-x-hidden">
+
+    <!-- Container Utama -->
+    <div class="flex-grow flex flex-col w-full relative">
+        
+        <!-- Navbar -->
+        <header class="sticky top-0 z-40 bg-gray-50/80 backdrop-blur-md border-b border-gray-100">
+            <nav class="max-w-[1500px] mx-auto px-6 py-5 flex items-center justify-between">
+                <div>
+                    <a href="#" class="text-xl font-bold tracking-tight text-gray-900 hover:opacity-80 transition-opacity">
+                        ErmediaTeam<span class="text-gray-400">.</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex gap-8 items-center">
+                    <a href="https://ermediateam.bismillahku.com/" class="text-sm font-medium text-gray-500 hover:text-gray-900 transition-colors">Tema</a>
+                    <a href="https://ermediateam.bismillahku.com/" class="text-sm font-medium text-gray-500 hover:text-gray-900 transition-colors">Element</a>
+                    <a href="https://ermediateam.bismillahku.com/" class="text-sm font-medium text-gray-500 hover:text-gray-900 transition-colors">Warna</a>
+                    <a href="https://ermediateam.bismillahku.com/" class="text-sm font-medium text-gray-500 hover:text-gray-900 transition-colors">Font</a>
+                </div>
+                <!-- Tombol Menu Mobile -->
+                <button class="md:hidden text-gray-500 hover:text-gray-900">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" x2="21" y1="6" y2="6"/><line x1="3" x2="21" y1="12" y2="12"/><line x1="3" x2="21" y1="18" y2="18"/></svg>
+                </button>
+            </nav>
+        </header>
+
+        <!-- Konten Utama -->
+        <main class="flex-grow w-full max-w-[1500px] mx-auto px-6">
+            
+            <!-- Bagian Hero -->
+            <section id="hero" class="flex flex-col items-center text-center mt-6">
+                <img src="https://ermediateam06.github.io/Referensi-Design/banner.webp" class="object-cover w-full h-48 md:h-48 rounded-2xl" alt="">
+            </section>
+
+            <!-- Bagian Daftar Tema -->
+            <section id="daftar-tema" class="py-16 md:py-24 border-t border-gray-100">
+                <div class="flex items-center justify-between mb-8">
+                    <h2 class="text-xl font-bold tracking-tight text-gray-900 hover:opacity-80 transition-opacity uppercase"></h2>
+                    <a href="#" class="text-sm font-medium text-gray-500 hover:text-gray-900 flex items-center gap-1 group">
+                        Lihat semua
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="group-hover:translate-x-1 transition-transform"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                    </a>
+                </div>
+                
+                <!-- Wadah Grid -->
+                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-8">
+                    
+                    <!-- Item Tema 1 -->
+                    <div onclick="openSidebar(1)" class="cursor-pointer group flex flex-col overflow-hidden bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl hover:border-gray-200 transition-all duration-300">
+                        <div class="relative w-full aspect-[4/3] bg-gray-100 overflow-hidden">
+                            <img src="https://ermediateam06.github.io/Referensi-Design/background.png" alt="Tema 1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out">
+                        </div>
+                        <div class="p-5 flex items-center justify-between">
+                            <div>
+                                <h3 class="font-semibold text-gray-900 text-sm md:text-base">Scrapbook - Photo Collage</h3>
+                                <p class="text-[10px] md:text-[11px] font-semibold text-emerald-600 mt-1 bg-emerald-50 px-2 py-1 rounded-md w-fit">01. NOTE
+-</p>
+                            </div>
+                            <div class="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 group-hover:bg-gray-900 group-hover:text-white transition-colors duration-300 shrink-0 ml-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item Tema 2 -->
+                    <div onclick="openSidebar(2)" class="cursor-pointer group flex flex-col overflow-hidden bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl hover:border-gray-200 transition-all duration-300">
+                        <div class="relative w-full aspect-[4/3] bg-gray-100 overflow-hidden">
+                            <img src="https://ermediateam06.github.io/Referensi-Design/background.png" alt="Tema 1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out">
+                        </div>
+                        <div class="p-5 flex items-center justify-between">
+                            <div>
+                                <h3 class="font-semibold text-gray-900 text-sm md:text-base">Minimalist Quote - Instagram Story</h3>
+                                <p class="text-[10px] md:text-[11px] font-semibold text-emerald-600 mt-1 bg-emerald-50 px-2 py-1 rounded-md w-fit">02. NOTE
+-</p>
+                            </div>
+                            <div class="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 group-hover:bg-gray-900 group-hover:text-white transition-colors duration-300 shrink-0 ml-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item Tema 3 -->
+                    <div onclick="openSidebar(3)" class="cursor-pointer group flex flex-col overflow-hidden bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl hover:border-gray-200 transition-all duration-300">
+                        <div class="relative w-full aspect-[4/3] bg-gray-100 overflow-hidden">
+                            <img src="https://ermediateam06.github.io/Referensi-Design/background.png" alt="Tema 1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out">
+                        </div>
+                        <div class="p-5 flex items-center justify-between">
+                            <div>
+                                <h3 class="font-semibold text-gray-900 text-sm md:text-base">Idul Fitri - Instagram story</h3>
+                                <p class="text-[10px] md:text-[11px] font-semibold text-emerald-600 mt-1 bg-emerald-50 px-2 py-1 rounded-md w-fit">03. NOTE
+-</p>
+                            </div>
+                            <div class="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 group-hover:bg-gray-900 group-hover:text-white transition-colors duration-300 shrink-0 ml-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item Tema 4 -->
+                    <div onclick="openSidebar(4)" class="cursor-pointer group flex flex-col overflow-hidden bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl hover:border-gray-200 transition-all duration-300">
+                        <div class="relative w-full aspect-[4/3] bg-gray-100 overflow-hidden">
+                            <img src="https://ermediateam06.github.io/Referensi-Design/background.png" alt="Tema 1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out">
+                        </div>
+                        <div class="p-5 flex items-center justify-between">
+                            <div>
+                                <h3 class="font-semibold text-gray-900 text-sm md:text-base">Bakery - Logo</h3>
+                                <p class="text-[10px] md:text-[11px] font-semibold text-emerald-600 mt-1 bg-emerald-50 px-2 py-1 rounded-md w-fit">04. NOTE
+-</p>
+                            </div>
+                            <div class="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 group-hover:bg-gray-900 group-hover:text-white transition-colors duration-300 shrink-0 ml-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item Tema 5 -->
+                    <div onclick="openSidebar(5)" class="cursor-pointer group flex flex-col overflow-hidden bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl hover:border-gray-200 transition-all duration-300">
+                        <div class="relative w-full aspect-[4/3] bg-gray-100 overflow-hidden">
+                            <img src="https://ermediateam06.github.io/Referensi-Design/background.png" alt="Tema 1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out">
+                        </div>
+                        <div class="p-5 flex items-center justify-between">
+                            <div>
+                                <h3 class="font-semibold text-gray-900 text-sm md:text-base">Modern Marketing Agency - Flyer (EN)</h3>
+                                <p class="text-[10px] md:text-[11px] font-semibold text-emerald-600 mt-1 bg-emerald-50 px-2 py-1 rounded-md w-fit">Flyer (Portrait A4) • 210 x 297 mm</p>
+                            </div>
+                            <div class="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 group-hover:bg-gray-900 group-hover:text-white transition-colors duration-300 shrink-0 ml-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item Tema 6 -->
+                    <div onclick="openSidebar(6)" class="cursor-pointer group flex flex-col overflow-hidden bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl hover:border-gray-200 transition-all duration-300">
+                        <div class="relative w-full aspect-[4/3] bg-gray-100 overflow-hidden">
+                            <img src="https://ermediateam06.github.io/Referensi-Design/background.png" alt="Tema 1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out">
+                        </div>
+                        <div class="p-5 flex items-center justify-between">
+                            <div>
+                                <h3 class="font-semibold text-gray-900 text-sm md:text-base">Minimalist Weekly Planner - Planner</h3>
+                                <p class="text-[10px] md:text-[11px] font-semibold text-emerald-600 mt-1 bg-emerald-50 px-2 py-1 rounded-md w-fit">Planner (Portrait) • 21 x 29.7 cm</p>
+                            </div>
+                            <div class="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 group-hover:bg-gray-900 group-hover:text-white transition-colors duration-300 shrink-0 ml-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </main>
+
+        <!-- Sidebar Detail -->
+        <div id="overlay" onclick="closeSidebar()" class="fixed inset-0 bg-black/20 backdrop-blur-sm z-[60] opacity-0 pointer-events-none transition-opacity duration-300"></div>
+        <aside id="sidebar" class="fixed top-0 right-0 h-full w-full max-w-md bg-white shadow-2xl z-[70] translate-x-full transition-transform duration-500 ease-out flex flex-col">
+            <div class="p-6 flex items-center justify-between border-b border-gray-100">
+                <h2 class="text-lg font-bold tracking-tight uppercase" id="sidebar-title">Detail Desain</h2>
+                <button onclick="closeSidebar()" class="p-2 hover:bg-gray-100 rounded-full transition-colors text-gray-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" x2="6" y1="6" y2="18"/><line x1="6" x2="18" y1="6" y2="18"/></svg>
+                </button>
+            </div>
+            <div class="flex-grow overflow-y-auto p-6" id="sidebar-content">
+                <!-- Konten dinamis masuk di sini -->
+            </div>
+   
+        </aside>
+
+        <!-- Footer -->
+        <footer class="bg-gray-900 mt-12 py-12">
+            <div class="max-w-[1500px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex flex-col items-center md:items-start">
+                    <h2 class="text-lg font-bold tracking-tight text-white mb-2">ErmediaTheme.</h2>
+                    <p class="text-sm text-gray-400">Copyright © 2026 ErmediaTheme. All rights reserved.</p>
+                </div>
+                <div class="flex flex-wrap justify-center gap-6">
+                    <a href="#" class="text-sm text-gray-400 hover:text-white transition-colors">Whatsapp</a>
+                    <a href="#" class="text-sm text-gray-400 hover:text-white transition-colors">Instagram</a>
+                    <a href="https://www.bismillahku.com" class="text-sm text-gray-400 hover:text-white transition-colors">Website</a>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <script>
+        // Data Dummy untuk masing-masing card
+        const cardData = {
+            1: {
+                title: "Scrapbook - Photo Collage",
+                badge: "01. NOTE
+-",
+                badgeClass: "text-[#e67073] bg-[#e7191f25]",
+                description: "Selalu buka tab issue saat pertama kali membuka template untuk memastikan tidak ada masalah yang terlewatkan.",
+                catatan: [""],
+                copytext: ["Opsi_1: <br><br>Scrapbook Photo Collage<br><br>[Cherished Memories]__<br><br>Capturing every laugh, every adventure, and every little moment that matters. From Neha Joshi and Kunal Desai’s favorite days to the spontaneous trips in between. These are the pieces of our story that we never want to forget.", "Opsi_2: <br><br>Scrapbook Photo Collage<br><br>[A Year in Review]__<br><br>A beautiful mess of memories made with Variety Supermarket. Every photo tells a story of growth, happiness, and the magic of the ordinary. Keep blooming and documenting the journey."],
+                previewImg: "https://ermediateam06.github.io/Referensi-Design/background.png",
+                linkRef: [
+                  "https://www.canva.com/templates/EAGkWxIfEG0/", 
+                  "https://www.canva.com/templates/EAGVfiQ84R4/", 
+                  "https://www.canva.com/templates/EAGreQZJ6rs/", 
+                  "undefined", 
+                  "undefined", 
+                  "undefined", 
+                ],
+            },
+
+            2: {
+                title: "Minimalist Quote - Instagram Story",
+                badge: "02. NOTE
+-",
+                badgeClass: "text-[#e67073] bg-[#e7191f25]",
+                description: "Selalu buka tab issue saat pertama kali membuka template untuk memastikan tidak ada masalah yang terlewatkan.",
+                catatan: [""],
+                copytext: ["Opsi_3: <br><br>Minimalist Quote Instagram Story<br><br>[Simplicity]__<br><br>'Simplicity is the ultimate sophistication.' — Leonardo da Vinci.", "Opsi_4:<br><br>Minimalist Quote Instagram Story<br><br>[Daily Focus]__<br><br>Focus on the step, not the mountain."],
+                previewImg: "https://ermediateam06.github.io/Referensi-Design/background.png",
+                linkRef: [
+                  "https://www.canva.com/templates/EAGtDRoksmY/", 
+                  "https://www.canva.com/templates/EAGlovotGtI/", 
+                  "https://www.canva.com/templates/EAGUso4oWlk/", 
+                  "undefined", 
+                  "undefined", 
+                  "undefined", 
+                ],
+            },
+            
+            3: {
+                title: "Idul Fitri - Instagram story",
+                badge: "03. NOTE
+-",
+                badgeClass: "text-[#e67073] bg-[#e7191f25]",
+                description: "Selalu buka tab issue saat pertama kali membuka template untuk memastikan tidak ada masalah yang terlewatkan.",
+                catatan: [""],
+                copytext: ["Opsi_5: <br><br>Idul Fitri Instagram story<br><br>[Sucikan Hati]__<br><br>Selamat Hari Raya Idul Fitri 1445 H. Minal Aidin Wal Faizin, mohon maaf lahir dan batin. Mari kita sambut hari kemenangan ini dengan hati yang bersih dan penuh syukur bersama Noble Banking.", "Opsi_6: <br><br>Idul Fitri Instagram story<br><br>[Kemenangan Bersama]__<br><br>Taqabbalallahu Minna Wa Minkum. Selamat lebaran dari keluarga besar Gentle Wellness Center. Semoga kebahagiaan dan keberkahan selalu menyertai langkah kita semua di hari yang fitri ini."],
+                previewImg: "https://ermediateam06.github.io/Referensi-Design/background.png",
+                linkRef: [
+                  "https://www.canva.com/id_id/contoh/EAG-K2zGKqA-hijau-dan-emas-elegan-selamat-menunaikan-ibadah-puasa-instagram-story/", 
+                  "https://www.canva.com/id_id/contoh/EAGADmhV_7o-hijau-kuning-ilustrasi-minimalis-selamat-hari-raya-idul-fitri-cerita-instagram/", 
+                  "https://www.canva.com/id_id/contoh/EAGBYh5zvf4-hijau-modern-hari-raya-idul-fitri-cerita-instagram/", 
+                  "undefined", 
+                  "undefined", 
+                  "undefined", 
+                ],
+            },
+            4: {
+                title: "Bakery - Logo",
+                badge: "04. NOTE
+-",
+                badgeClass: "text-[#e67073] bg-[#e7191f25]",
+                description: "Selalu buka tab issue saat pertama kali membuka template untuk memastikan tidak ada masalah yang terlewatkan.",
+                catatan: [""],
+                copytext: ["Opsi_7: <br><br>Bakery Logo<br><br>[Sweet Indulgence]__<br><br>Good Food Co — Baked with love, served with joy.", "Opsi_8:<br><br>Bakery Logo<br><br>[The Daily Crust]__<br><br>Town & Co — Freshly baked every sunrise."],
+                previewImg: "https://ermediateam06.github.io/Referensi-Design/background.png",
+                linkRef: [
+                  "https://www.canva.com/templates/EAE1k1TamYc-bakery-cake-shop-logo/", 
+                  "https://www.canva.com/templates/EAGzwh2ye7g-brown-vintage-illustration-bakery-logo/", 
+                  "https://www.canva.com/templates/EAE5CYQkYtU-pink-food-bakery-instagram-post/", 
+                  "undefined", 
+                  "undefined", 
+                  "undefined", 
+                ],
+            },
+
+            5: {
+                title: "Modern Marketing Agency - Flyer (EN)",
+                badge: "Flyer (Portrait A4) • 210 x 297 mm",
+                badgeClass: "text-[#e67073] bg-[#e7191f25]",
+                description: "Selalu buka tab issue saat pertama kali membuka template untuk memastikan tidak ada masalah yang terlewatkan.",
+                catatan: ["Warna tidak boleh lebih dari 3", ",Jenis Font tidak boleh lebih dari 3", ",Gunakan Warna dari REferensi"],
+                copytext: ["Opsi_9: <br><br>Modern Marketing Agency Flyer (EN)<br><br>[Elevate Your Brand]__<br><br>Vivid Design<br><br>Transforming Ideas into Digital Success.<br><br>We specialize in high-impact strategies that drive results and scale your business to new heights.<br><br><br><br>Our Services:<br><br>Digital Strategy & Growth<br><br>Content Creation & Branding<br><br>Social Media Management<br><br><br><br>About Us<br><br>Creative Studio + Lab is a group of creative thinkers and data-driven experts committed to helping businesses thrive in the modern digital landscape.<br><br><br><br>Contact:<br><br>+123-456-7890 | hello@reallygreatsite.com<br><br>www.reallygreatsite.com<br><br>@reallygreatsite<br><br>123 Anywhere St., Any City.", "Opsi_10: <br><br>Modern Marketing Agency Flyer (EN)<br><br>[Innovation Meets Strategy]__<br><br>Studio North<br><br>Your Partner in Modern Marketing.<br><br>Helping brands navigate the digital world with precision, creativity, and proven results.<br><br><br><br>What We Do:<br><br>Paid Advertising (PPC)<br><br>Search Engine Optimization<br><br>Brand Identity Design<br><br><br><br>Who We Are<br><br>We are a full-service agency that believes in the power of innovation. Our mission is to bridge the gap between your brand and your audience.<br><br><br><br>Contact:<br><br>+123-456-7890 | reallygreatsite.com<br><br>@reallygreatsite<br><br>123 Anywhere St., Any City."],
+                previewImg: "https://ermediateam06.github.io/Referensi-Design/background.png",
+                linkRef: [
+                  "https://www.canva.com/templates/EAGdFx9Z3l4/", 
+                  "https://www.canva.com/templates/EAGkzJljIGE/", 
+                  "https://www.canva.com/templates/EAGWbFs746A/", 
+                  "https://www.canva.com/templates/EAGs17cBYEw/", 
+                  "https://www.canva.com/templates/EAG_DURrniI/", 
+                  "https://www.canva.com/templates/EAFMp6zN6sA/", 
+                ],
+            },
+
+            6: {
+                title: "Minimalist Weekly Planner - Planner",
+                badge: "Planner (Portrait) • 21 x 29.7 cm",
+                badgeClass: "text-[#e67073] bg-[#e7191f25]",
+                description: "Selalu buka tab issue saat pertama kali membuka template untuk memastikan tidak ada masalah yang terlewatkan.",
+                catatan: [""],
+                copytext: ["Opsi_11: <br><br>Minimalist Weekly Planner Planner", "Opsi_12:<br><br>Minimalist Weekly Planner Planner"],
+                previewImg: "https://ermediateam06.github.io/Referensi-Design/background.png",
+                linkRef: [
+                  "https://www.canva.com/templates/EAHCJIDFwSs", 
+                  "https://www.canva.com/templates/EAEmnxi0HeM/", 
+                  "https://www.canva.com/templates/EAG2A6CVlPo/", 
+                  "https://www.canva.com/templates/EAFafx1xtw8/", 
+                  "https://www.canva.com/templates/EAFn8zLkf8I/", 
+                  "https://www.canva.com/templates/EAFzaw7eitU/", 
+                ],
+            },
+        };
+
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('overlay');
+        const sidebarContent = document.getElementById('sidebar-content');
+        const sidebarTitle = document.getElementById('sidebar-title');
+        const sidebarLink = document.getElementById('sidebar-link');
+
+        function openSidebar(id) {
+            const data = cardData[id];
+            if (!data) return;
+
+            // Update Konten Sidebar
+            sidebarTitle.innerText = "Detail Desain";
+            
+            
+            sidebarContent.innerHTML = `
+                <img src="${data.previewImg}" class="w-full rounded-xl mb-6 shadow-md" alt="Preview">
+                <span class="${data.badgeClass} px-3 py-1 rounded-md text-[11px] font-bold mb-4 inline-block uppercase tracking-wider">${data.badge}</span>
+                <h3 class="text-2xl font-bold mb-3 font-serif">${data.title}</h3>
+                <p class="text-gray-500 text-sm leading-relaxed mb-8">${data.description}</p>
+                
+                <h4 class="font-bold text-sm uppercase tracking-widest text-gray-400 mb-4">Catatan</h4>
+                <ul class="space-y-3">
+                    ${data.catatan.map(f => `
+                        <li class="flex items-center gap-3 text-sm font-medium">
+                            <div class="w-5 h-5 rounded-full bg-gray-900 text-white flex items-center justify-center shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            </div>
+                            ${f}
+                        </li>
+                    `).join('')}
+                </ul>
+
+                <h4 class="font-bold text-sm uppercase tracking-widest text-gray-400 mb-4 mt-16">Referensi</h4>
+                <ul class="space-y-3">
+                    ${data.linkRef.map(f => `
+                        <a href="${f}" target="_blank" class="flex items-center gap-3 text-sm font-medium text-blue-600 bg-blue-50 px-3 py-1 rounded-md">
+                            ${f}
+                        </a>
+                    `).join('')}
+                </ul>
+
+                <h4 class="font-bold text-sm uppercase tracking-widest text-gray-400 mb-4 mt-16">Copywriter</h4>
+                <ul class="space-y-3">
+                    ${data.copytext.map(f => `
+                        <p class="flex items-center gap-3 text-sm font-medium text-black-600 bg-gray-100 px-3 py-1 rounded-md mb-4 pt-4 pb-4">
+                            ${f}
+                        </p>
+                    `).join('')}
+                </ul>
+            `;
+
+            // Tampilkan Sidebar
+            sidebar.classList.remove('translate-x-full');
+            overlay.classList.remove('opacity-0', 'pointer-events-none');
+            document.body.style.overflow = 'hidden'; // Mencegah scroll background
+        }
+
+        function closeSidebar() {
+            sidebar.classList.add('translate-x-full');
+            overlay.classList.add('opacity-0', 'pointer-events-none');
+            document.body.style.overflow = ''; // Mengembalikan scroll
+        }
+
+        // Tutup dengan tombol Escape
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeSidebar();
+        });
+    </script>
+</body>
+</html>

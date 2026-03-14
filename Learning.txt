@@ -1,0 +1,25 @@
+Judul:
+Style Isi - Doctype
+
+Doctype:
+Doctype + Ukuran
+
+Catatan:
+Referensi warna (Warna Background, Text Judul, Text Deskripsi, warna element)
+Referensi Background (Background Foto/ Background warna/ background Element)
+Referensi Tata Letak Text (Lokasi Text judul, deskripsi, element)
+Referensi Font Style ()
+Berdasarkan style serif,  sanserif, script, handwriten, 
+Berdasarkan ukuran, expanded, condensed, normal
+Berdasarkan 
+
+Referensi:
+-
+-
+-
+-
+
+Materi Pembelajaran Tiap minggu
+Minggu pertama Font
+Minggu Kedua Warna
+Minggu ketiga Space

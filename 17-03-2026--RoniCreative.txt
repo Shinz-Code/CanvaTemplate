@@ -1,5 +1,5 @@
 JUDUL
-RoniCreative-160326
+RoniCreative-170326
 
 ---------------------------------------{ REFERENSI 01 }----------------------------------------
 
@@ -65,42 +65,44 @@ Poster (Portrait A2) • 42 × 59.4 cm
 - #
 
 03. PROMPT AI
-poster
+no text needed
 
 ---------------------------------------{ REFERENSI 04 }----------------------------------------
 
 04. DOCTYPE
-
+Healthy Food - Infographic
 
 04. SIZE
-
+Infographic (Digital) • 800 × 2000 px
 
 04. NOTE
-- 
+- #
 
 04. REFERENSI
-- 
+- https://www.canva.com/templates/EAHCzgNVHds
+- https://www.canva.com/templates/EAHB3x7feGk
 - #
 - #
 - #
 - #
 
 04. PROMPT AI
- Happy Bithday + Short Quote
+judul, tagline singkat, 4 subjudul dan 4 deskripsi dengan panjang 15 - 18 kata, alamat website
 
 ---------------------------------------{ REFERENSI 05 }----------------------------------------
 
 05. DOCTYPE
-
+Weddin Invitation - Card
 
 05. SIZE
-
+Card (Landscape) • 14.8 × 10.5 cm
 
 05. NOTE
-- 
+- Gunakan Element Pro cari yang paling bagus
 
 05. REFERENSI
-- 
+- https://www.canva.com/templates/EAHDq2bHgwA
+- https://www.canva.com/templates/EAGeGT9yEZg
 - #
 - #
 - #
@@ -112,18 +114,21 @@ poster
 ---------------------------------------{ REFERENSI 06 }----------------------------------------
 
 06. DOCTYPE
-
+Psychology - Business Card
 
 06. SIZE
-
+Business Card (Landscape) • 3.5 × 2 in
 
 06. NOTE
 - 
 
 06. REFERENSI
-- 
+- https://www.canva.com/templates/EAHBx0HCysg
+- #
+- #
 - #
 - #
 - #
 
 06. PROMPT AI
+Nama Psikiater, job, 4 Contact, hal 2 Nama Usaha, website

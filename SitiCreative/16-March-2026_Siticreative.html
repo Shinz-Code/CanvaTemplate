@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Mengimpor font elegan dari Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=DM+Serif+Display:ital@0;1&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <!-- Memuat Tailwind CSS melalui CDN untuk styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['DM Serif Display', 'serif'],
+                        playfair: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        gray: {
+                            50: '#fafafa',
+                            100: '#f4f4f5',
+                            500: '#71717a',
+                            800: '#27272a',
+                            900: '#18181b',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <title>ErmediaTeam</title>
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans antialiased min-h-screen flex flex-col selection:bg-gray-200 overflow-x-hidden">
+
+    <!-- Container Utama -->
+    <div class="flex-grow flex flex-col w-full relative">
+        
+        <!-- Navbar -->
+        <header class="sticky top-0 z-40 bg-gray-50/80 backdrop-blur-md border-b border-gray-100">
+            <nav class="max-w-[1500px] mx-auto px-6 py-5 flex items-center justify-between">
+                <div>
+                    <a href="#" class="text-xl font-bold tracking-tight text-gray-900 hover:opacity-80 transition-opacity">
+                        ErmediaTeam<span class="text-gray-400">.</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex gap-8 items-center">
+                    <a href="https://ermediateam.bismillahku.com/" class="text-sm font-medium text-gray-500 hover:text-gray-900 transition-colors">Tema</a>
+                    <a href="https://ermediateam.bismillahku.com/" class="text-sm font-medium text-gray-500 hover:text-gray-900 transition-colors">Element</a>
+                    <a href="https://ermediateam.bismillahku.com/" class="text-sm font-medium text-gray-500 hover:text-gray-900 transition-colors">Warna</a>
+                    <a href="https://ermediateam.bismillahku.com/" class="text-sm font-medium text-gray-500 hover:text-gray-900 transition-colors">Font</a>
+                </div>
+                <!-- Tombol Menu Mobile -->
+                <button class="md:hidden text-gray-500 hover:text-gray-900">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" x2="21" y1="6" y2="6"/><line x1="3" x2="21" y1="12" y2="12"/><line x1="3" x2="21" y1="18" y2="18"/></svg>
+                </button>
+            </nav>
+        </header>
+
+        <!-- Konten Utama -->
+        <main class="flex-grow w-full max-w-[1500px] mx-auto px-6">
+            
+            <!-- Bagian Hero -->
+            <section id="hero" class="flex flex-col items-center text-center mt-6">
+                <img src="https://ermediateam06.github.io/Referensi-Design/banner.webp" class="object-cover w-full h-48 md:h-48 rounded-2xl" alt="">
+            </section>
+
+            <!-- Bagian Daftar Tema -->
+            <section id="daftar-tema" class="py-16 md:py-24 border-t border-gray-100">
+                <div class="flex items-center justify-between mb-8">
+                    <h2 class="text-xl font-bold tracking-tight text-gray-900 hover:opacity-80 transition-opacity uppercase"></h2>
+                    <a href="#" class="text-sm font-medium text-gray-500 hover:text-gray-900 flex items-center gap-1 group">
+                        Lihat semua
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="group-hover:translate-x-1 transition-transform"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                    </a>
+                </div>
+                
+                <!-- Wadah Grid -->
+                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-8">
+                    
+                    <!-- Item Tema 1 -->
+                    <div onclick="openSidebar(1)" class="cursor-pointer group flex flex-col overflow-hidden bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl hover:border-gray-200 transition-all duration-300">
+                        <div class="relative w-full aspect-[4/3] bg-gray-100 overflow-hidden">
+                            <img src="https://ermediateam06.github.io/Referensi-Design/background.png" alt="Tema 1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out">
+                        </div>
+                        <div class="p-5 flex items-center justify-between">
+                            <div>
+                                <h3 class="font-semibold text-gray-900 text-sm md:text-base">Creative Brief - Presentation (EN)</h3>
+                                <p class="text-[10px] md:text-[11px] font-semibold text-emerald-600 mt-1 bg-emerald-50 px-2 py-1 rounded-md w-fit">Presentation</p>
+                            </div>
+                            <div class="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 group-hover:bg-gray-900 group-hover:text-white transition-colors duration-300 shrink-0 ml-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item Tema 2 -->
+                    <div onclick="openSidebar(2)" class="cursor-pointer group flex flex-col overflow-hidden bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl hover:border-gray-200 transition-all duration-300">
+                        <div class="relative w-full aspect-[4/3] bg-gray-100 overflow-hidden">
+                            <img src="https://ermediateam06.github.io/Referensi-Design/background.png" alt="Tema 1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out">
+                        </div>
+                        <div class="p-5 flex items-center justify-between">
+                            <div>
+                                <h3 class="font-semibold text-gray-900 text-sm md:text-base">Project Presentation (EN</h3>
+                                <p class="text-[10px] md:text-[11px] font-semibold text-emerald-600 mt-1 bg-emerald-50 px-2 py-1 rounded-md w-fit">Presentation</p>
+                            </div>
+                            <div class="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 group-hover:bg-gray-900 group-hover:text-white transition-colors duration-300 shrink-0 ml-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item Tema 3 -->
+                    <div onclick="openSidebar(3)" class="cursor-pointer group flex flex-col overflow-hidden bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl hover:border-gray-200 transition-all duration-300">
+                        <div class="relative w-full aspect-[4/3] bg-gray-100 overflow-hidden">
+                            <img src="https://ermediateam06.github.io/Referensi-Design/background.png" alt="Tema 1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out">
+                        </div>
+                        <div class="p-5 flex items-center justify-between">
+                            <div>
+                                <h3 class="font-semibold text-gray-900 text-sm md:text-base">Group Project - Presentation (EN)</h3>
+                                <p class="text-[10px] md:text-[11px] font-semibold text-emerald-600 mt-1 bg-emerald-50 px-2 py-1 rounded-md w-fit">Presentation</p>
+                            </div>
+                            <div class="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 group-hover:bg-gray-900 group-hover:text-white transition-colors duration-300 shrink-0 ml-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item Tema 4 -->
+                    <div onclick="openSidebar(4)" class="cursor-pointer group flex flex-col overflow-hidden bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl hover:border-gray-200 transition-all duration-300">
+                        <div class="relative w-full aspect-[4/3] bg-gray-100 overflow-hidden">
+                            <img src="https://ermediateam06.github.io/Referensi-Design/background.png" alt="Tema 1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out">
+                        </div>
+                        <div class="p-5 flex items-center justify-between">
+                            <div>
+                                <h3 class="font-semibold text-gray-900 text-sm md:text-base"></h3>
+                                <p class="text-[10px] md:text-[11px] font-semibold text-emerald-600 mt-1 bg-emerald-50 px-2 py-1 rounded-md w-fit"></p>
+                            </div>
+                            <div class="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 group-hover:bg-gray-900 group-hover:text-white transition-colors duration-300 shrink-0 ml-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item Tema 5 -->
+                    <div onclick="openSidebar(5)" class="cursor-pointer group flex flex-col overflow-hidden bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl hover:border-gray-200 transition-all duration-300">
+                        <div class="relative w-full aspect-[4/3] bg-gray-100 overflow-hidden">
+                            <img src="https://ermediateam06.github.io/Referensi-Design/background.png" alt="Tema 1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out">
+                        </div>
+                        <div class="p-5 flex items-center justify-between">
+                            <div>
+                                <h3 class="font-semibold text-gray-900 text-sm md:text-base"></h3>
+                                <p class="text-[10px] md:text-[11px] font-semibold text-emerald-600 mt-1 bg-emerald-50 px-2 py-1 rounded-md w-fit"></p>
+                            </div>
+                            <div class="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 group-hover:bg-gray-900 group-hover:text-white transition-colors duration-300 shrink-0 ml-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item Tema 6 -->
+                    <div onclick="openSidebar(6)" class="cursor-pointer group flex flex-col overflow-hidden bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl hover:border-gray-200 transition-all duration-300">
+                        <div class="relative w-full aspect-[4/3] bg-gray-100 overflow-hidden">
+                            <img src="https://ermediateam06.github.io/Referensi-Design/background.png" alt="Tema 1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out">
+                        </div>
+                        <div class="p-5 flex items-center justify-between">
+                            <div>
+                                <h3 class="font-semibold text-gray-900 text-sm md:text-base"></h3>
+                                <p class="text-[10px] md:text-[11px] font-semibold text-emerald-600 mt-1 bg-emerald-50 px-2 py-1 rounded-md w-fit"></p>
+                            </div>
+                            <div class="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 group-hover:bg-gray-900 group-hover:text-white transition-colors duration-300 shrink-0 ml-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </main>
+
+        <!-- Sidebar Detail -->
+        <div id="overlay" onclick="closeSidebar()" class="fixed inset-0 bg-black/20 backdrop-blur-sm z-[60] opacity-0 pointer-events-none transition-opacity duration-300"></div>
+        <aside id="sidebar" class="fixed top-0 right-0 h-full w-full max-w-md bg-white shadow-2xl z-[70] translate-x-full transition-transform duration-500 ease-out flex flex-col">
+            <div class="p-6 flex items-center justify-between border-b border-gray-100">
+                <h2 class="text-lg font-bold tracking-tight uppercase" id="sidebar-title">Detail Desain</h2>
+                <button onclick="closeSidebar()" class="p-2 hover:bg-gray-100 rounded-full transition-colors text-gray-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" x2="6" y1="6" y2="18"/><line x1="6" x2="18" y1="6" y2="18"/></svg>
+                </button>
+            </div>
+            <div class="flex-grow overflow-y-auto p-6" id="sidebar-content">
+                <!-- Konten dinamis masuk di sini -->
+            </div>
+   
+        </aside>
+
+        <!-- Footer -->
+        <footer class="bg-gray-900 mt-12 py-12">
+            <div class="max-w-[1500px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex flex-col items-center md:items-start">
+                    <h2 class="text-lg font-bold tracking-tight text-white mb-2">ErmediaTheme.</h2>
+                    <p class="text-sm text-gray-400">Copyright © 2026 ErmediaTheme. All rights reserved.</p>
+                </div>
+                <div class="flex flex-wrap justify-center gap-6">
+                    <a href="#" class="text-sm text-gray-400 hover:text-white transition-colors">Whatsapp</a>
+                    <a href="#" class="text-sm text-gray-400 hover:text-white transition-colors">Instagram</a>
+                    <a href="https://www.bismillahku.com" class="text-sm text-gray-400 hover:text-white transition-colors">Website</a>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <script>
+        // Data Dummy untuk masing-masing card
+        const cardData = {
+            1: {
+                title: "Creative Brief - Presentation (EN)",
+                badge: "Presentation",
+                badgeClass: "text-[#e67073] bg-[#e7191f25]",
+                description: "Selalu buka tab issue saat pertama kali membuka template untuk memastikan tidak ada masalah yang terlewatkan.",
+                catatan: ["Referensi cari sendiri"],
+                copytext: ["Opsi_1: <br><br>Creative Brief Presentation (EN)<br><br>[Judul]__<br><br>Slide 1: Creative Brief: Plainview Marketing Campaign Strategy<br><br>Subtitle: Crafting a Vision for Digital Excellence and Market Leadership<br><br><br><br>Slide 2: Agenda<br><br>1. Project Background<br><br>2. Market Analysis<br><br>3. Creative Strategy<br><br>4. Media Planning<br><br>5. Budget Allocation<br><br>6. Risk Assessment<br><br>7. Implementation Roadmap<br><br>8. Success Metrics<br><br><br><br>Slide 3: Overview<br><br>1. Our brand aims to redefine the digital experience by integrating innovative technology with human-centric design principles effectively. (18 words)<br><br>2. We focus on delivering high-quality visual content that resonates deeply with our core audience's unique lifestyle and values. (18 words)<br><br>3. The market landscape is shifting rapidly, requiring a dynamic approach to maintain our competitive edge and brand loyalty. (18 words)<br><br>4. Success will be measured through increased engagement rates and a significant boost in overall brand awareness across platforms. (18 words)<br><br><br><br>Slide 4: Objective & Goal<br><br>1. Brand Awareness: Enhancing visibility across all major social media platforms and digital touchpoints globally.<br><br>2. Customer Conversion: Streamlining the user journey to increase lead generation and overall sales performance significantly.<br><br>3. Market Expansion: Identifying and penetrating new demographic segments to broaden our brand's reach and influence.<br><br><br><br>Slide 5: Target Audience<br><br>Young professionals aged 25-40 seeking premium, sustainable products that align with their modern, tech-savvy lifestyles and values.<br><br><br><br>Slide 6: Competitor<br><br>1. Rival A: Dominates the budget market with aggressive pricing but lacks premium brand emotional connection.<br><br>2. Competitor B: Strong legacy presence but struggles to adapt to modern digital trends and younger audiences.<br><br>3. Challenger C: New entry with high innovation, currently gaining traction through viral social media campaigns.<br><br><br><br>Slide 7: Timeline/Milestone<br><br>1. Research Phase: In-depth market analysis and competitor benchmarking to establish a solid strategic foundation for growth.<br><br>2. Creative Design: Developing unique visual assets and messaging that align perfectly with the brand’s core identity.<br><br>3. Campaign Launch: Executing the rollout across all selected media channels with synchronized promotional activities and ads.<br><br>4. Evaluation: Analyzing performance data against KPIs to optimize future strategies and ensure long-term campaign success.<br><br><br><br>Slide 8: Message from Project Founder<br><br>'Our vision for Openform Agency is to empower brands through authentic storytelling and data-driven insights. Together, we will bridge the gap between imagination and reality, creating a lasting impact in an ever-evolving digital world.'<br><br><br><br>Slide 9: Team<br><br>1. Farhan Malik Creative Director<br><br>2. Iman Ali Lead Strategist<br><br>3. Adam Fletcher Project Manager<br><br>4. Lucy Pritchard Senior Designer<br><br><br><br>Slide 10: Thanks + Ucapan<br><br>Thank You! We appreciate your time. Let's create something extraordinary together.<br><br>Website: www.reallygreatsite.com | Social: @reallygreatsite<br><br>\n", "\n<br><br><br><br>Opsi_2: <br><br>Creative Brief Presentation (EN)<br><br>[Judul]__<br><br>Slide 1: Creative Brief: Everyday Skincare Seasonal Launch<br><br>Subtitle: Enhancing Natural Beauty Through Sustainable Innovation and Design<br><br><br><br>Slide 2: Agenda<br><br>1. Campaign Overview<br><br>2. Audience Insights<br><br>3. Creative Concept<br><br>4. Content Pillars<br><br>5. Influencer Strategy<br><br>6. Platform Selection<br><br>7. Production Timeline<br><br>8. KPI Benchmarks<br><br><br><br>Slide 3: Overview<br><br>1. This campaign introduces a revolutionary skincare line designed specifically for sensitive skin types using purely organic ingredients. (17 words)<br><br>2. We intend to capture the essence of natural beauty while promoting environmental sustainability through eco-friendly packaging solutions. (17 words)<br><br>3. Our marketing strategy emphasizes transparency and community trust to build a loyal customer base in the competitive market. (18 words)<br><br>4. We are committed to delivering exceptional value by providing expert-led educational content alongside our premium product offerings. (17 words)<br><br><br><br>Slide 4: Objective & Goal<br><br>1. Product Education: Informing customers about the benefits of organic ingredients for long-term skin health and safety.<br><br>2. Community Growth: Increasing social media following and engagement by fostering meaningful conversations with our beauty community.<br><br>3. Sales Growth: Driving direct-to-consumer sales through targeted seasonal promotions and exclusive early-access offers for members.<br><br><br><br>Slide 5: Target Audience<br><br>Eco-conscious beauty enthusiasts who prioritize ingredient transparency and sustainable practices in their daily personal care routines.<br><br><br><br>Slide 6: Competitor<br><br>1. Brand X: Strong retail presence but lacks a personalized digital experience and direct customer engagement.<br><br>2. Label Y: High-end luxury pricing that excludes a significant portion of the eco-conscious middle-market segment.<br><br>3. Startup Z: Fast-growing digital native brand focusing heavily on Gen-Z trends but lacking dermatologist-backed credibility.<br><br><br><br>Slide 7: Timeline/Milestone<br><br>1. Product Dev: Finalizing the organic formulas and obtaining necessary dermatological certifications for the new product line.<br><br>2. Visual Assets: Coordinating photo shoots and video production to create aesthetic content for social media platforms.<br><br>3. Pre-Launch Buzz: Engaging influencers for teaser campaigns to generate excitement before the official website launch date.<br><br>4. Market Release: Opening the online store and processing initial orders while monitoring customer feedback and reviews.<br><br><br><br>Slide 8: Message from Project Founder<br><br>'We believe beauty should be kind to your skin and the planet. This project represents our commitment to purity, innovation, and the belief that everyone deserves access to safe, high-quality skincare products.'<br><br><br><br>Slide 9: Team<br><br>1. Farah Begum Founder & CEO<br><br>2. Jack Rowe R&D Lead<br><br>3. Natalie Cooper Marketing Head<br><br>4. Adam Fletcher Content Creator<br><br><br><br>Slide 10: Thanks + Ucapan<br><br>Thanks for watching! Join us in redefining beauty. <br><br>Email: hello@reallygreatsite.com | Mobile: +123-456-7890<br><br>\n"],
+                previewImg: "https://ermediateam06.github.io/Referensi-Design/background.png",
+                linkRef: [
+                  "https://www.canva.com/templates/EAFaYPfKRPU", 
+                  "https://www.canva.com/templates/EAF6KJk1OWo", 
+                  "#", 
+                  "#", 
+                  "#", 
+                  "#", 
+                ],
+            },
+
+            2: {
+                title: "Project Presentation (EN",
+                badge: "Presentation",
+                badgeClass: "text-[#e67073] bg-[#e7191f25]",
+                description: "Selalu buka tab issue saat pertama kali membuka template untuk memastikan tidak ada masalah yang terlewatkan.",
+                catatan: ["Warna soft + Minimalist"],
+                copytext: ["\n<br><br><br><br>Opsi_3: <br><br>Project Presentation (EN)<br><br>[Judul]__<br><br>Slide 1: Project Presentation: Cloudlet System Upgrade<br><br>Subtitle: Revolutionizing Internal Infrastructure for Enhanced Operational Performance<br><br><br><br>Slide 2: Agenda<br><br>1. System Audit<br><br>2. Identified Issues<br><br>3. Proposed Solution<br><br>4. Hardware Requirements<br><br>5. Software Integration<br><br>6. Security Protocols<br><br>7. Implementation Phase<br><br>8. Support Plan<br><br><br><br>Slide 3: Overview<br><br>1. Our primary goal is to upgrade existing legacy systems to modern cloud-based architecture for better scalability and performance. (18 words)<br><br>2. This project involves a comprehensive overhaul of database management to ensure faster data processing and retrieval times. (18 words)<br><br>3. We are implementing advanced encryption techniques to safeguard all internal communications and sensitive client information from threats. (18 words)<br><br>4. The new system will provide a seamless interface for employees, significantly reducing technical downtime and improving productivity. (18 words)<br><br><br><br>Slide 4: Objective & Goal<br><br>1. System Stability: Minimizing server crashes and technical glitches through robust backend optimization and regular maintenance.<br><br>2. Data Security: Implementing multi-layer authentication and end-to-end encryption to prevent unauthorized access and data breaches.<br><br>3. Cost Efficiency: Reducing long-term maintenance costs by migrating to more efficient and scalable cloud computing services.<br><br><br><br>Slide 5: Target Audience<br><br>Internal stakeholders, IT department staff, and executive management focusing on technological growth and data security.<br><br><br><br>Slide 6: Competitor<br><br>1. Legacy Vendor: Reliable history but provides outdated technology that slows down modern digital workflow requirements.<br><br>2. Niche Provider: Offers specialized tools but lacks the comprehensive support and integration needed for large-scale operations.<br><br>3. Global Tech: Highly advanced features but comes with excessive costs and complex implementation processes for teams.<br><br><br><br>Slide 7: Timeline/Milestone<br><br>1. Initial Audit: Conducting a thorough review of the current tech stack to identify critical vulnerabilities and needs.<br><br>2. System Design: Architecting the new cloud framework and selecting the most appropriate software tools for integration.<br><br>3. Migration Phase: Transferring existing data to the new system while ensuring zero loss and minimal service disruption.<br><br>4. Staff Training: Providing comprehensive workshops to ensure all employees are proficient in using the upgraded technology platform.<br><br><br><br>Slide 8: Message from Project Founder<br><br>'Technology is the backbone of our success. By investing in this upgrade, we are not just fixing systems; we are building a foundation for future innovation that will empower every member of our team.'<br><br><br><br>Slide 9: Team<br><br>1. Aaron Mensah CTO<br><br>2. Lucy Harding Systems Architect<br><br>3. Oliver Shaw Security Analyst<br><br>4. Laura Bennett IT Support Lead<br><br><br><br>Slide 10: Thanks + Ucapan<br><br>Thank you for your support! Moving toward a smarter digital future.<br><br>Website: reallygreatsite.com | Address: 123 Anywhere St.<br><br>\n", "\n<br><br><br><br>Opsi_4:<br><br>Project Presentation (EN)<br><br>[Judul]__<br><br>Slide 1: Project Presentation: Dwell Properties Urban Living<br><br>Subtitle: Innovative Residential Solutions for the Modern Metropolitan Lifestyle<br><br><br><br>Slide 2: Agenda<br><br>1. Market Demand<br><br>2. Location Analysis<br><br>3. Architectural Design<br><br>4. Amenity Offerings<br><br>5. Sustainability Features<br><br>6. Sales Strategy<br><br>7. Construction Stages<br><br>8. Financial Projections<br><br><br><br>Slide 3: Overview<br><br>1. This residential project aims to create affordable yet luxurious living spaces in the heart of the city's district. (18 words)<br><br>2. We incorporate smart home technology into every unit to provide residents with modern convenience and enhanced security features. (18 words)<br><br>3. Our design philosophy prioritizes open green spaces and natural lighting to promote a healthy and balanced lifestyle. (17 words)<br><br>4. We are committed to using eco-friendly materials and energy-efficient systems to minimize the overall environmental footprint. (17 words)<br><br><br><br>Slide 4: Objective & Goal<br><br>1. Urban Integration: Blending modern architecture with existing city landscapes to enhance local community aesthetics and value.<br><br>2. Resident Satisfaction: Providing high-end amenities and responsive management services to ensure a premium living experience for all.<br><br>3. Investment Return: Delivering strong capital growth and rental yields for investors through strategic location and quality construction.<br><br><br><br>Slide 5: Target Audience<br><br>Young urban professionals and modern families seeking high-quality, convenient, and tech-integrated housing in prime city locations.<br><br><br><br>Slide 6: Competitor<br><br>1. Luxury Towers: Offers extreme luxury but at price points that are inaccessible to the growing middle-class market.<br><br>2. Older Apartments: More affordable options but lack the modern amenities and smart technology features residents now expect.<br><br>3. Suburban Devs: Provide more space but involve long commute times that do not appeal to urban-centric professionals.<br><br><br><br>Slide 7: Timeline/Milestone<br><br>1. Land Acquisition: Securing the prime location and obtaining all necessary zoning permits and local government approvals.<br><br>2. Foundation Work: Commencing the structural engineering phase and laying the groundwork for the multi-story residential building.<br><br>3. Interior Fit-out: Finalizing the aesthetic details and installing smart home systems in each individual residential unit.<br><br>4. Grand Opening: Launching the sales gallery and welcoming the first residents to their new modern urban homes.<br><br><br><br>Slide 8: Message from Project Founder<br><br>'We build more than just houses; we create communities where people can thrive. This project is a testament to our dedication to quality, innovation, and the future of urban living for everyone.'<br><br><br><br>Slide 9: Team<br><br>1. Sameer Shah Lead Architect<br><br>2. Hannah Porter Project Manager<br><br>3. George Wilkins Sales Director<br><br>4. Naomi Mensah Interior Designer<br><br><br><br>Slide 10: Thanks + Ucapan<br><br>Thank you! Building the future of city living together.<br><br>Mobile: +123-456-7890 | Social: @reallygreatsite<br><br>\n"],
+                previewImg: "https://ermediateam06.github.io/Referensi-Design/background.png",
+                linkRef: [
+                  "https://www.canva.com/templates/EAGTua5CrcY", 
+                  "https://www.canva.com/templates/EAGRuV6y09E", 
+                  "#", 
+                  "#", 
+                  "#", 
+                  "#", 
+                ],
+            },
+            
+            3: {
+                title: "Group Project - Presentation (EN)",
+                badge: "Presentation",
+                badgeClass: "text-[#e67073] bg-[#e7191f25]",
+                description: "Selalu buka tab issue saat pertama kali membuka template untuk memastikan tidak ada masalah yang terlewatkan.",
+                catatan: ["Warna soft + Minimalist"],
+                copytext: ["\n<br><br><br><br>Opsi_5: <br><br>Group Project Presentation (EN)<br><br>[Judul]__<br><br>Slide 1: Group Project: (Education) Literacy Initiative<br><br>Subtitle: Promoting Digital Literacy in Underserved Communities through Collaborative Research<br><br><br><br>Slide 2: Agenda<br><br>1. Research Purpose<br><br>2. Team Roles<br><br>3. Literature Review<br><br>4. Data Collection<br><br>5. Key Findings<br><br>6. Proposed Solutions<br><br>7. Implementation Plan<br><br>8. Conclusion<br><br><br><br>Slide 3: Overview<br><br>1. Our research examines the direct correlation between access to digital tools and student academic performance in local schools. (18 words)<br><br>2. We aim to identify the specific socio-economic barriers that prevent students from achieving full digital literacy skills. (17 words)<br><br>3. Through community surveys, we gathered valuable insights from teachers, parents, and students regarding their daily technological challenges. (17 words)<br><br>4. This project proposes a sustainable framework for providing affordable internet and devices to families in need today. (17 words)<br><br><br><br>Slide 4: Objective & Goal<br><br>1. Knowledge Gap: Identifying the specific digital skills that students lack to tailor educational programs effectively for them.<br><br>2. Resource Access: Developing a roadmap for local governments to distribute recycled tech hardware to low-income school districts.<br><br>3. Long-term Impact: Creating a scalable model that can be replicated in other regions to bridge the digital divide.<br><br><br><br>Slide 5: Target Audience<br><br>School board members, local government officials, and community leaders interested in improving regional educational equity and access.<br><br><br><br>Slide 6: Competitor<br><br>1. Private Tutors: Provide high-quality education but are often too expensive for the demographic we are targeting.<br><br>2. Online Platforms: Offer free resources but require stable internet access, which many of our target students lack.<br><br>3. National NGOs: Have large resources but often lack the local community connections needed for effective grassroots implementation.<br><br><br><br>Slide 7: Timeline/Milestone<br><br>1. Survey Phase: Distributing questionnaires to 500 households to collect quantitative data on digital device ownership and usage.<br><br>2. Data Analysis: Utilizing statistical software to identify patterns and trends within the collected community research data.<br><br>3. Prototype Dev: Creating a pilot training module for digital literacy to be tested in one local community center.<br><br>4. Final Report: Compiling all findings into a comprehensive document for presentation to the regional education department.<br><br><br><br>Slide 8: Message from Project Founder<br><br>'Education is the most powerful tool for change. By working as a team, we can ensure that no student is left behind in an increasingly digital world. Let's make digital literacy a reality.'<br><br><br><br>Slide 9: Team<br><br>1. Amy Fletcher Research Lead<br><br>2. Jack Rowe Data Analyst<br><br>3. Emma Brooks Community Liaison<br><br>4. Joseph Adeyemi Technical Writer<br><br><br><br>Slide 10: Thanks + Ucapan<br><br>Thank you for your attention! Let's empower the next generation.<br><br>Email: hello@reallygreatsite.com | Web: reallygreatsite.com<br><br>\n", "\n"],
+                previewImg: "https://ermediateam06.github.io/Referensi-Design/background.png",
+                linkRef: [
+                  "https://www.canva.com/templates/EAGOxvQUock", 
+                  "https://www.canva.com/templates/EAGZnJUoYuw", 
+                  "#", 
+                  "#", 
+                  "#", 
+                  "#", 
+                ],
+            },
+            4: {
+                title: "",
+                badge: "",
+                badgeClass: "text-[#e67073] bg-[#e7191f25]",
+                description: "Selalu buka tab issue saat pertama kali membuka template untuk memastikan tidak ada masalah yang terlewatkan.",
+                catatan: [""],
+                copytext: ["undefined", "undefined"],
+                previewImg: "https://ermediateam06.github.io/Referensi-Design/background.png",
+                linkRef: [
+                  "undefined", 
+                  "undefined", 
+                  "undefined", 
+                  "undefined", 
+                  "undefined", 
+                  "undefined", 
+                ],
+            },
+
+            5: {
+                title: "",
+                badge: "",
+                badgeClass: "text-[#e67073] bg-[#e7191f25]",
+                description: "Selalu buka tab issue saat pertama kali membuka template untuk memastikan tidak ada masalah yang terlewatkan.",
+                catatan: [""],
+                copytext: ["undefined", "undefined"],
+                previewImg: "https://ermediateam06.github.io/Referensi-Design/background.png",
+                linkRef: [
+                  "undefined", 
+                  "undefined", 
+                  "undefined", 
+                  "undefined", 
+                  "undefined", 
+                  "undefined", 
+                ],
+            },
+
+            6: {
+                title: "",
+                badge: "",
+                badgeClass: "text-[#e67073] bg-[#e7191f25]",
+                description: "Selalu buka tab issue saat pertama kali membuka template untuk memastikan tidak ada masalah yang terlewatkan.",
+                catatan: [""],
+                copytext: ["undefined", "undefined"],
+                previewImg: "https://ermediateam06.github.io/Referensi-Design/background.png",
+                linkRef: [
+                  "undefined", 
+                  "undefined", 
+                  "undefined", 
+                  "undefined", 
+                  "undefined", 
+                  "undefined", 
+                ],
+            },
+        };
+
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('overlay');
+        const sidebarContent = document.getElementById('sidebar-content');
+        const sidebarTitle = document.getElementById('sidebar-title');
+        const sidebarLink = document.getElementById('sidebar-link');
+
+        function openSidebar(id) {
+            const data = cardData[id];
+            if (!data) return;
+
+            // Update Konten Sidebar
+            sidebarTitle.innerText = "Detail Desain";
+            
+            
+            sidebarContent.innerHTML = `
+                <img src="${data.previewImg}" class="w-full rounded-xl mb-6 shadow-md" alt="Preview">
+                <span class="${data.badgeClass} px-3 py-1 rounded-md text-[11px] font-bold mb-4 inline-block uppercase tracking-wider">${data.badge}</span>
+                <h3 class="text-2xl font-bold mb-3 font-serif">${data.title}</h3>
+                <p class="text-gray-500 text-sm leading-relaxed mb-8">${data.description}</p>
+                
+                <h4 class="font-bold text-sm uppercase tracking-widest text-gray-400 mb-4">Catatan</h4>
+                <ul class="space-y-3">
+                    ${data.catatan.map(f => `
+                        <li class="flex items-center gap-3 text-sm font-medium">
+                            <div class="w-5 h-5 rounded-full bg-gray-900 text-white flex items-center justify-center shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            </div>
+                            ${f}
+                        </li>
+                    `).join('')}
+                </ul>
+
+                <h4 class="font-bold text-sm uppercase tracking-widest text-gray-400 mb-4 mt-16">Referensi</h4>
+                <ul class="space-y-3">
+                    ${data.linkRef.map(f => `
+                        <a href="${f}" target="_blank" class="flex items-center gap-3 text-sm font-medium text-blue-600 bg-blue-50 px-3 py-1 rounded-md">
+                            ${f}
+                        </a>
+                    `).join('')}
+                </ul>
+
+                <h4 class="font-bold text-sm uppercase tracking-widest text-gray-400 mb-4 mt-16">Copywriter</h4>
+                <ul class="space-y-3">
+                    ${data.copytext.map(f => `
+                        <p class="flex items-center gap-3 text-sm font-medium text-black-600 bg-gray-100 px-3 py-1 rounded-md mb-4 pt-4 pb-4">
+                            ${f}
+                        </p>
+                    `).join('')}
+                </ul>
+            `;
+
+            // Tampilkan Sidebar
+            sidebar.classList.remove('translate-x-full');
+            overlay.classList.remove('opacity-0', 'pointer-events-none');
+            document.body.style.overflow = 'hidden'; // Mencegah scroll background
+        }
+
+        function closeSidebar() {
+            sidebar.classList.add('translate-x-full');
+            overlay.classList.add('opacity-0', 'pointer-events-none');
+            document.body.style.overflow = ''; // Mengembalikan scroll
+        }
+
+        // Tutup dengan tombol Escape
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeSidebar();
+        });
+    </script>
+</body>
+</html>
